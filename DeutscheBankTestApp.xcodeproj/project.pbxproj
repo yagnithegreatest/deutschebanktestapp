@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192E269A7E4C7A846903EA3B /* Pods_DeutscheBankTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DD7B01C648B7490FEB9120 /* Pods_DeutscheBankTestApp.framework */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BD2A4D7B6D00B09323 /* ContentView.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		86D391C52A4D7B6E00B09323 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391C42A4D7B6E00B09323 /* Persistence.swift */; };
 		86D391C82A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86D391C62A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld */; };
 		86D391D22A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */; };
+		DF48B5E0BC018FEC49E231DE /* Pods_DeutscheBankTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F4C8C43D2C88722EB31AFF /* Pods_DeutscheBankTestAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D14D3971E459051591A86F /* Pods-DeutscheBankTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestApp.release.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestApp/Pods-DeutscheBankTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		145BFD8A26CC79D84EE0D87C /* Pods-DeutscheBankTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestAppTests.release.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestAppTests/Pods-DeutscheBankTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E2850A0E28C271219488D63 /* Pods-DeutscheBankTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestApp.debug.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestApp/Pods-DeutscheBankTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		72EDCEFAC79079575C6F5197 /* Pods-DeutscheBankTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestAppTests/Pods-DeutscheBankTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BD2A4D7B6D00B09323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		86D391C72A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeutscheBankTestApp.xcdatamodel; sourceTree = "<group>"; };
 		86D391CD2A4D7B6E00B09323 /* DeutscheBankTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeutscheBankTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppTests.swift; sourceTree = "<group>"; };
+		A0DD7B01C648B7490FEB9120 /* Pods_DeutscheBankTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeutscheBankTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0F4C8C43D2C88722EB31AFF /* Pods_DeutscheBankTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeutscheBankTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192E269A7E4C7A846903EA3B /* Pods_DeutscheBankTestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF48B5E0BC018FEC49E231DE /* Pods_DeutscheBankTestAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				86D391BA2A4D7B6D00B09323 /* DeutscheBankTestApp */,
 				86D391D02A4D7B6E00B09323 /* DeutscheBankTestAppTests */,
 				86D391B92A4D7B6D00B09323 /* Products */,
+				B6E3156DE31538576C95F344 /* Pods */,
+				99055108D3283CFE3C6117AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +123,27 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		99055108D3283CFE3C6117AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD7B01C648B7490FEB9120 /* Pods_DeutscheBankTestApp.framework */,
+				E0F4C8C43D2C88722EB31AFF /* Pods_DeutscheBankTestAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6E3156DE31538576C95F344 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E2850A0E28C271219488D63 /* Pods-DeutscheBankTestApp.debug.xcconfig */,
+				05D14D3971E459051591A86F /* Pods-DeutscheBankTestApp.release.xcconfig */,
+				72EDCEFAC79079575C6F5197 /* Pods-DeutscheBankTestAppTests.debug.xcconfig */,
+				145BFD8A26CC79D84EE0D87C /* Pods-DeutscheBankTestAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D391E12A4D7B6F00B09323 /* Build configuration list for PBXNativeTarget "DeutscheBankTestApp" */;
 			buildPhases = (
+				8ABC12B05A803BE000C9C18A /* [CP] Check Pods Manifest.lock */,
 				86D391B42A4D7B6D00B09323 /* Sources */,
 				86D391B52A4D7B6D00B09323 /* Frameworks */,
 				86D391B62A4D7B6D00B09323 /* Resources */,
+				C8B7FBCC6017348099250CD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D391E42A4D7B6F00B09323 /* Build configuration list for PBXNativeTarget "DeutscheBankTestAppTests" */;
 			buildPhases = (
+				4C2A969546420542DDDAB242 /* [CP] Check Pods Manifest.lock */,
 				86D391C92A4D7B6E00B09323 /* Sources */,
 				86D391CA2A4D7B6E00B09323 /* Frameworks */,
 				86D391CB2A4D7B6E00B09323 /* Resources */,
@@ -205,6 +241,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C2A969546420542DDDAB242 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeutscheBankTestAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ABC12B05A803BE000C9C18A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeutscheBankTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B7FBCC6017348099250CD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeutscheBankTestApp/Pods-DeutscheBankTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeutscheBankTestApp/Pods-DeutscheBankTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeutscheBankTestApp/Pods-DeutscheBankTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86D391B42A4D7B6D00B09323 /* Sources */ = {
@@ -353,6 +453,7 @@
 		};
 		86D391E22A4D7B6F00B09323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2850A0E28C271219488D63 /* Pods-DeutscheBankTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +483,7 @@
 		};
 		86D391E32A4D7B6F00B09323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D14D3971E459051591A86F /* Pods-DeutscheBankTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -411,6 +513,7 @@
 		};
 		86D391E52A4D7B6F00B09323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72EDCEFAC79079575C6F5197 /* Pods-DeutscheBankTestAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -431,6 +534,7 @@
 		};
 		86D391E62A4D7B6F00B09323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 145BFD8A26CC79D84EE0D87C /* Pods-DeutscheBankTestAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
