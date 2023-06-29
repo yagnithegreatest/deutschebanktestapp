@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
+		86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BD2A4D7B6D00B09323 /* ContentView.swift */; };
+		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
+		86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */; };
+		86D391C52A4D7B6E00B09323 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391C42A4D7B6E00B09323 /* Persistence.swift */; };
+		86D391C82A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86D391C62A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld */; };
+		86D391D22A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86D391CE2A4D7B6E00B09323 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D391B02A4D7B6D00B09323 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86D391B72A4D7B6D00B09323;
+			remoteInfo = DeutscheBankTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
+		86D391BD2A4D7B6D00B09323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86D391BF2A4D7B6E00B09323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86D391C42A4D7B6E00B09323 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		86D391C72A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeutscheBankTestApp.xcdatamodel; sourceTree = "<group>"; };
+		86D391CD2A4D7B6E00B09323 /* DeutscheBankTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeutscheBankTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86D391B52A4D7B6D00B09323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D391CA2A4D7B6E00B09323 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86D391AF2A4D7B6D00B09323 = {
+			isa = PBXGroup;
+			children = (
+				86D391BA2A4D7B6D00B09323 /* DeutscheBankTestApp */,
+				86D391D02A4D7B6E00B09323 /* DeutscheBankTestAppTests */,
+				86D391B92A4D7B6D00B09323 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86D391B92A4D7B6D00B09323 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */,
+				86D391CD2A4D7B6E00B09323 /* DeutscheBankTestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86D391BA2A4D7B6D00B09323 /* DeutscheBankTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				86D391EA2A4D7D5600B09323 /* NetworkLayer */,
+				86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */,
+				86D391BD2A4D7B6D00B09323 /* ContentView.swift */,
+				86D391BF2A4D7B6E00B09323 /* Assets.xcassets */,
+				86D391C42A4D7B6E00B09323 /* Persistence.swift */,
+				86D391C62A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld */,
+				86D391C12A4D7B6E00B09323 /* Preview Content */,
+			);
+			path = DeutscheBankTestApp;
+			sourceTree = "<group>";
+		};
+		86D391C12A4D7B6E00B09323 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86D391D02A4D7B6E00B09323 /* DeutscheBankTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */,
+			);
+			path = DeutscheBankTestAppTests;
+			sourceTree = "<group>";
+		};
+		86D391EA2A4D7D5600B09323 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86D391B72A4D7B6D00B09323 /* DeutscheBankTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D391E12A4D7B6F00B09323 /* Build configuration list for PBXNativeTarget "DeutscheBankTestApp" */;
+			buildPhases = (
+				86D391B42A4D7B6D00B09323 /* Sources */,
+				86D391B52A4D7B6D00B09323 /* Frameworks */,
+				86D391B62A4D7B6D00B09323 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeutscheBankTestApp;
+			productName = DeutscheBankTestApp;
+			productReference = 86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86D391CC2A4D7B6E00B09323 /* DeutscheBankTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D391E42A4D7B6F00B09323 /* Build configuration list for PBXNativeTarget "DeutscheBankTestAppTests" */;
+			buildPhases = (
+				86D391C92A4D7B6E00B09323 /* Sources */,
+				86D391CA2A4D7B6E00B09323 /* Frameworks */,
+				86D391CB2A4D7B6E00B09323 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86D391CF2A4D7B6E00B09323 /* PBXTargetDependency */,
+			);
+			name = DeutscheBankTestAppTests;
+			productName = DeutscheBankTestAppTests;
+			productReference = 86D391CD2A4D7B6E00B09323 /* DeutscheBankTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86D391B02A4D7B6D00B09323 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					86D391B72A4D7B6D00B09323 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					86D391CC2A4D7B6E00B09323 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 86D391B72A4D7B6D00B09323;
+					};
+				};
+			};
+			buildConfigurationList = 86D391B32A4D7B6D00B09323 /* Build configuration list for PBXProject "DeutscheBankTestApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86D391AF2A4D7B6D00B09323;
+			productRefGroup = 86D391B92A4D7B6D00B09323 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86D391B72A4D7B6D00B09323 /* DeutscheBankTestApp */,
+				86D391CC2A4D7B6E00B09323 /* DeutscheBankTestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86D391B62A4D7B6D00B09323 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */,
+				86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D391CB2A4D7B6E00B09323 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86D391B42A4D7B6D00B09323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D391C82A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld in Sources */,
+				86D391C52A4D7B6E00B09323 /* Persistence.swift in Sources */,
+				86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */,
+				86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D391C92A4D7B6E00B09323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D391D22A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86D391CF2A4D7B6E00B09323 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86D391B72A4D7B6D00B09323 /* DeutscheBankTestApp */;
+			targetProxy = 86D391CE2A4D7B6E00B09323 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		86D391DF2A4D7B6F00B09323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86D391E02A4D7B6F00B09323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86D391E22A4D7B6F00B09323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DeutscheBankTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KQ83CB6WQK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vniko1sky.DeutscheBankTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86D391E32A4D7B6F00B09323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DeutscheBankTestApp/Preview Content\"";
+				DEVELOPMENT_TEAM = KQ83CB6WQK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vniko1sky.DeutscheBankTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86D391E52A4D7B6F00B09323 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KQ83CB6WQK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vniko1sky.DeutscheBankTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeutscheBankTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeutscheBankTestApp";
+			};
+			name = Debug;
+		};
+		86D391E62A4D7B6F00B09323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KQ83CB6WQK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vniko1sky.DeutscheBankTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeutscheBankTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeutscheBankTestApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86D391B32A4D7B6D00B09323 /* Build configuration list for PBXProject "DeutscheBankTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D391DF2A4D7B6F00B09323 /* Debug */,
+				86D391E02A4D7B6F00B09323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86D391E12A4D7B6F00B09323 /* Build configuration list for PBXNativeTarget "DeutscheBankTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D391E22A4D7B6F00B09323 /* Debug */,
+				86D391E32A4D7B6F00B09323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86D391E42A4D7B6F00B09323 /* Build configuration list for PBXNativeTarget "DeutscheBankTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D391E52A4D7B6F00B09323 /* Debug */,
+				86D391E62A4D7B6F00B09323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		86D391C62A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				86D391C72A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodel */,
+			);
+			currentVersion = 86D391C72A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodel */;
+			path = DeutscheBankTestApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 86D391B02A4D7B6D00B09323 /* Project object */;
+}
