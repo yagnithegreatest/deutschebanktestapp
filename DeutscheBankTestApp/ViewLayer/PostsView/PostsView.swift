@@ -20,9 +20,11 @@ struct PostsView: View {
                     if let error = self.viewModel.error {
                         ErrorView(error: error, title: self.viewModel.errorViewTitle)
                     } else {
+                        
                         List(self.viewModel.posts, id: \.id) { post in
-                            Text(post.title)
+                            SinglePostView(post: post)
                         }
+                        .navigationTitle(LocalizableManager.myPostsTitle)
                     }
                 }
             }

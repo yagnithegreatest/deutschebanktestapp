@@ -21,7 +21,7 @@ struct LoginView: View {
                     .cornerRadius(Constants.UIConstants.baseCornerRadius)
                     .border(Color.gray, width: 0.5)
                 Spacer()
-                NavigationLink(destination: PostsView(viewModel: PostsViewModel(userID: Int(userID) ?? 0))) {
+                NavigationLink(destination: PostsView(viewModel: PostsViewModel(userID: Int(self.userID) ?? 0))) {
                     Text(LocalizableManager.showPosts)
                 }
                 .padding()

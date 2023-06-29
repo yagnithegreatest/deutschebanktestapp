@@ -12,9 +12,8 @@ struct LoadingView: View {
     var body: some View {
         
         VStack {
-            
             ProgressView()
-            Text("Loading...")
+            Text(LocalizableManager.basicLoadingTitle)
                 .font(.title)
                 .padding(.top)
         }

@@ -17,5 +17,9 @@ struct Constants {
     struct UIConstants {
         
         static let baseCornerRadius: CGFloat = 10
+        
+        static let defaultPadding: CGFloat = 10
+        
+        static let smallerPadding: CGFloat = 5
     }
 }

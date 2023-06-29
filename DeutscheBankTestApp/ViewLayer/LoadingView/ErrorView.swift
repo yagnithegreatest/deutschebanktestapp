@@ -19,10 +19,10 @@ struct ErrorView: View {
             Image(systemName: "exclamationmark.triangle")
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(title ?? "Oops! An error occurred.")
+            Text(self.title ?? LocalizableManager.basicErrorTitle)
                 .font(.title)
                 .padding(.top)
-            Text(error.localizedDescription)
+            Text(self.error.localizedDescription)
                 .multilineTextAlignment(.center)
                 .padding()
         }

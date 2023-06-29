@@ -31,6 +31,10 @@
 		86A72FAE2A4DC072005ED681 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FAD2A4DC072005ED681 /* PostsView.swift */; };
 		86A72FB02A4DC4E6005ED681 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FAF2A4DC4E6005ED681 /* LoginView.swift */; };
 		86A72FB32A4DC792005ED681 /* LocalizableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FB22A4DC792005ED681 /* LocalizableManager.swift */; };
+		86A72FB72A4DCF6A005ED681 /* SinglePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FB62A4DCF6A005ED681 /* SinglePostView.swift */; };
+		86A72FB92A4DD3DB005ED681 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FB82A4DD3DB005ED681 /* FontManager.swift */; };
+		86A72FBB2A4DD5F6005ED681 /* FavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FBA2A4DD5F6005ED681 /* FavButton.swift */; };
+		86A72FBD2A4DD6BB005ED681 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BD2A4D7B6D00B09323 /* ContentView.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
@@ -79,6 +83,10 @@
 		86A72FAD2A4DC072005ED681 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		86A72FAF2A4DC4E6005ED681 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		86A72FB22A4DC792005ED681 /* LocalizableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableManager.swift; sourceTree = "<group>"; };
+		86A72FB62A4DCF6A005ED681 /* SinglePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostView.swift; sourceTree = "<group>"; };
+		86A72FB82A4DD3DB005ED681 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		86A72FBA2A4DD5F6005ED681 /* FavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavButton.swift; sourceTree = "<group>"; };
+		86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BD2A4D7B6D00B09323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,6 +198,8 @@
 			children = (
 				86A72F8D2A4D84E5005ED681 /* PostsViewModel.swift */,
 				86A72FAD2A4DC072005ED681 /* PostsView.swift */,
+				86A72FB62A4DCF6A005ED681 /* SinglePostView.swift */,
+				86A72FBA2A4DD5F6005ED681 /* FavButton.swift */,
 			);
 			path = PostsView;
 			sourceTree = "<group>";
@@ -268,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				86A72FB22A4DC792005ED681 /* LocalizableManager.swift */,
+				86A72FB82A4DD3DB005ED681 /* FontManager.swift */,
+				86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -534,14 +546,18 @@
 				86A72FAC2A4DBFD6005ED681 /* ErrorView.swift in Sources */,
 				86A72F792A4D81E8005ED681 /* Constants.swift in Sources */,
 				86A72F762A4D8152005ED681 /* NetworkService.swift in Sources */,
+				86A72FB72A4DCF6A005ED681 /* SinglePostView.swift in Sources */,
+				86A72FBB2A4DD5F6005ED681 /* FavButton.swift in Sources */,
 				86A72F982A4D93D7005ED681 /* CommentsNetworkService+Requests.swift in Sources */,
 				86A72F8E2A4D84E5005ED681 /* PostsViewModel.swift in Sources */,
 				86A72F882A4D8419005ED681 /* CommentAPIModel.swift in Sources */,
 				86A72F862A4D840C005ED681 /* PostAPIModel.swift in Sources */,
 				86A72F962A4D93C3005ED681 /* PostNetworkService+Requests.swift in Sources */,
+				86A72FB92A4DD3DB005ED681 /* FontManager.swift in Sources */,
 				86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */,
 				86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */,
 				86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */,
+				86A72FBD2A4DD6BB005ED681 /* ImageManager.swift in Sources */,
 				86A72FB02A4DC4E6005ED681 /* LoginView.swift in Sources */,
 				86A72FB32A4DC792005ED681 /* LocalizableManager.swift in Sources */,
 				86A72FAE2A4DC072005ED681 /* PostsView.swift in Sources */,

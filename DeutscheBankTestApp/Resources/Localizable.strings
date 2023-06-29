@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  DeutscheBankTestApp
+
+  Created by Vladislav Nikolsky on 29.06.2023.
+  
+*/
+
+/* Welcome Screen */
+"welcome_title" = "Login";
+"enter_user_id" = "Enter your userID";
+"show_posts" = "Show Posts";
+
+/* Welcome Screen */
+"my_posts_title" = "My posts";
+
+/* Tab view */
+"all" = "All";
+"favorite" = "Favorite";
+
+/* Tab view */
+"comments" = "Comments";
+
+/* Error view */
+"basic_error_title" = "Oops! An error occurred...";
+
+/* Loading view */
+"basic_loading_title" = "Loading...";
+
+
+/* Common */
+"spacer" = "    ";
