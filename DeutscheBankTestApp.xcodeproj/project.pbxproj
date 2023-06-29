@@ -25,6 +25,12 @@
 		86A72F9E2A4D9830005ED681 /* PostsNetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F9D2A4D9830005ED681 /* PostsNetworkServiceTest.swift */; };
 		86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F9F2A4D9A49005ED681 /* NetworkSession.swift */; };
 		86A72FA32A4DB7BB005ED681 /* MockNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */; };
+		86A72FA72A4DBF6D005ED681 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86A72FA62A4DBF6D005ED681 /* Localizable.strings */; };
+		86A72FAA2A4DBF98005ED681 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FA92A4DBF98005ED681 /* LoadingView.swift */; };
+		86A72FAC2A4DBFD6005ED681 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FAB2A4DBFD6005ED681 /* ErrorView.swift */; };
+		86A72FAE2A4DC072005ED681 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FAD2A4DC072005ED681 /* PostsView.swift */; };
+		86A72FB02A4DC4E6005ED681 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FAF2A4DC4E6005ED681 /* LoginView.swift */; };
+		86A72FB32A4DC792005ED681 /* LocalizableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FB22A4DC792005ED681 /* LocalizableManager.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BD2A4D7B6D00B09323 /* ContentView.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
@@ -67,6 +73,12 @@
 		86A72F9D2A4D9830005ED681 /* PostsNetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkServiceTest.swift; sourceTree = "<group>"; };
 		86A72F9F2A4D9A49005ED681 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkSession.swift; sourceTree = "<group>"; };
+		86A72FA62A4DBF6D005ED681 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		86A72FA92A4DBF98005ED681 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		86A72FAB2A4DBFD6005ED681 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		86A72FAD2A4DC072005ED681 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		86A72FAF2A4DC4E6005ED681 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		86A72FB22A4DC792005ED681 /* LocalizableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableManager.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BD2A4D7B6D00B09323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +115,7 @@
 		86A72F772A4D81DB005ED681 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FB12A4DC772005ED681 /* Managers */,
 				86A72F782A4D81E8005ED681 /* Constants.swift */,
 				86A72F8F2A4D8685005ED681 /* ServiceLocator.swift */,
 			);
@@ -164,6 +177,7 @@
 		86A72F892A4D8462005ED681 /* ViewLayer */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FA82A4DBF85005ED681 /* LoadingView */,
 				86A72F8C2A4D84D3005ED681 /* LoginView */,
 				86A72F8B2A4D84CC005ED681 /* CommentsView */,
 				86A72F8A2A4D84C0005ED681 /* PostsView */,
@@ -175,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				86A72F8D2A4D84E5005ED681 /* PostsViewModel.swift */,
+				86A72FAD2A4DC072005ED681 /* PostsView.swift */,
 			);
 			path = PostsView;
 			sourceTree = "<group>";
@@ -189,6 +204,7 @@
 		86A72F8C2A4D84D3005ED681 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FAF2A4DC4E6005ED681 /* LoginView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -196,9 +212,7 @@
 		86A72F912A4D9170005ED681 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				86A72F752A4D8152005ED681 /* NetworkService.swift */,
-				86A72F922A4D91FE005ED681 /* PostsNetworkService.swift */,
-				86A72F992A4D94FB005ED681 /* CommentsNetworkService.swift */,
+				86A72FA42A4DBCD2005ED681 /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -220,6 +234,42 @@
 				86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		86A72FA42A4DBCD2005ED681 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F752A4D8152005ED681 /* NetworkService.swift */,
+				86A72F922A4D91FE005ED681 /* PostsNetworkService.swift */,
+				86A72F992A4D94FB005ED681 /* CommentsNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		86A72FA52A4DBF44005ED681 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86D391BF2A4D7B6E00B09323 /* Assets.xcassets */,
+				86A72FA62A4DBF6D005ED681 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		86A72FA82A4DBF85005ED681 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FA92A4DBF98005ED681 /* LoadingView.swift */,
+				86A72FAB2A4DBFD6005ED681 /* ErrorView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		86A72FB12A4DC772005ED681 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FB22A4DC792005ED681 /* LocalizableManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		86D391AF2A4D7B6D00B09323 = {
@@ -245,13 +295,13 @@
 		86D391BA2A4D7B6D00B09323 /* DeutscheBankTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FA52A4DBF44005ED681 /* Resources */,
 				86A72F892A4D8462005ED681 /* ViewLayer */,
 				86A72F812A4D83B9005ED681 /* DataLayer */,
 				86A72F772A4D81DB005ED681 /* Helpers */,
 				86D391EA2A4D7D5600B09323 /* NetworkLayer */,
 				86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */,
 				86D391BD2A4D7B6D00B09323 /* ContentView.swift */,
-				86D391BF2A4D7B6E00B09323 /* Assets.xcassets */,
 				86D391C42A4D7B6E00B09323 /* Persistence.swift */,
 				86D391C62A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld */,
 				86D391C12A4D7B6E00B09323 /* Preview Content */,
@@ -391,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */,
+				86A72FA72A4DBF6D005ED681 /* Localizable.strings in Resources */,
 				86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,8 +528,10 @@
 				86D391C52A4D7B6E00B09323 /* Persistence.swift in Sources */,
 				86A72F742A4D80BC005ED681 /* Request.swift in Sources */,
 				86A72F902A4D8685005ED681 /* ServiceLocator.swift in Sources */,
+				86A72FAA2A4DBF98005ED681 /* LoadingView.swift in Sources */,
 				86A72F932A4D91FE005ED681 /* PostsNetworkService.swift in Sources */,
 				86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */,
+				86A72FAC2A4DBFD6005ED681 /* ErrorView.swift in Sources */,
 				86A72F792A4D81E8005ED681 /* Constants.swift in Sources */,
 				86A72F762A4D8152005ED681 /* NetworkService.swift in Sources */,
 				86A72F982A4D93D7005ED681 /* CommentsNetworkService+Requests.swift in Sources */,
@@ -489,6 +542,9 @@
 				86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */,
 				86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */,
 				86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */,
+				86A72FB02A4DC4E6005ED681 /* LoginView.swift in Sources */,
+				86A72FB32A4DC792005ED681 /* LocalizableManager.swift in Sources */,
+				86A72FAE2A4DC072005ED681 /* PostsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

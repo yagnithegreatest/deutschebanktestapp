@@ -10,23 +10,37 @@ import Foundation
 class PostsViewModel: ObservableObject {
     
     @Published var posts: [Post] = []
+    @Published var isLoading = false
+    @Published var error: Error?
+    @Published var errorViewTitle: String? = nil
     
-    private let networkService: NetworkServiceProtocol
+    private var userID: Int
+
+    private let networkService: PostsNetworkServiceProtocol
     
-    init(networkService: NetworkServiceProtocol = ServiceLocator.shared.getService()) {
+    init(networkService: PostsNetworkServiceProtocol = ServiceLocator.shared.getService(), userID: Int) {
+        
         self.networkService = networkService
+        self.userID = userID
     }
     
     func fetchPosts(userId: Int) {
         
-        networkService.request(PostsRequest(userId: userId)) { (result: Result<[Post], Error>) in
+        self.isLoading = true
+        
+        self.networkService.fetchPosts(userId: userId) { result in
             
-            switch result {
+            DispatchQueue.main.async {
                 
-            case .success(let posts):
-                self.posts = posts
-            case .failure(let error):
-                print(error.localizedDescription)  // handle error properly in a real app
+                self.isLoading = false
+                switch result {
+                case .success(let posts):
+                    self.posts = posts
+                case .failure(let error):
+                    
+                    self.error = error
+                    self.errorViewTitle = "Error loading posts"
+                }
             }
         }
     }

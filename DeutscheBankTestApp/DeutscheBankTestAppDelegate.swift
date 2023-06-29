@@ -11,7 +11,7 @@ import SwiftUI
 struct DeutscheBankTestAppDelegate: App {
     
     init() {
-        addDependencies()
+        self.addDependencies()
     }
     
     let persistenceController = PersistenceController.shared
@@ -19,9 +19,7 @@ struct DeutscheBankTestAppDelegate: App {
     var body: some Scene {
         
         WindowGroup {
-            
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            LoginView()
         }
     }
 

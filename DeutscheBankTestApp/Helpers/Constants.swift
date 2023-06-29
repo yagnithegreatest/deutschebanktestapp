@@ -13,4 +13,9 @@ struct Constants {
         
         static let baseURL = "https://jsonplaceholder.typicode.com"
     }
+    
+    struct UIConstants {
+        
+        static let baseCornerRadius: CGFloat = 10
+    }
 }
