@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		192E269A7E4C7A846903EA3B /* Pods_DeutscheBankTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DD7B01C648B7490FEB9120 /* Pods_DeutscheBankTestApp.framework */; };
+		86A72F742A4D80BC005ED681 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F732A4D80BC005ED681 /* Request.swift */; };
+		86A72F762A4D8152005ED681 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F752A4D8152005ED681 /* NetworkService.swift */; };
+		86A72F792A4D81E8005ED681 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F782A4D81E8005ED681 /* Constants.swift */; };
+		86A72F7D2A4D82CF005ED681 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F7C2A4D82CF005ED681 /* MockNetworkService.swift */; };
+		86A72F7F2A4D8364005ED681 /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F7E2A4D8364005ED681 /* NetworkServiceTest.swift */; };
+		86A72F862A4D840C005ED681 /* PostAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F852A4D840C005ED681 /* PostAPIModel.swift */; };
+		86A72F882A4D8419005ED681 /* CommentAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F872A4D8419005ED681 /* CommentAPIModel.swift */; };
+		86A72F8E2A4D84E5005ED681 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F8D2A4D84E5005ED681 /* PostsViewModel.swift */; };
+		86A72F902A4D8685005ED681 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F8F2A4D8685005ED681 /* ServiceLocator.swift */; };
+		86A72F932A4D91FE005ED681 /* PostsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F922A4D91FE005ED681 /* PostsNetworkService.swift */; };
+		86A72F962A4D93C3005ED681 /* PostNetworkService+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F952A4D93C3005ED681 /* PostNetworkService+Requests.swift */; };
+		86A72F982A4D93D7005ED681 /* CommentsNetworkService+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F972A4D93D7005ED681 /* CommentsNetworkService+Requests.swift */; };
+		86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F992A4D94FB005ED681 /* CommentsNetworkService.swift */; };
+		86A72F9C2A4D9817005ED681 /* CommentsNetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F9B2A4D9817005ED681 /* CommentsNetworkServiceTest.swift */; };
+		86A72F9E2A4D9830005ED681 /* PostsNetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F9D2A4D9830005ED681 /* PostsNetworkServiceTest.swift */; };
+		86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72F9F2A4D9A49005ED681 /* NetworkSession.swift */; };
+		86A72FA32A4DB7BB005ED681 /* MockNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BD2A4D7B6D00B09323 /* ContentView.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
@@ -33,6 +50,23 @@
 		145BFD8A26CC79D84EE0D87C /* Pods-DeutscheBankTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestAppTests.release.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestAppTests/Pods-DeutscheBankTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E2850A0E28C271219488D63 /* Pods-DeutscheBankTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestApp.debug.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestApp/Pods-DeutscheBankTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		72EDCEFAC79079575C6F5197 /* Pods-DeutscheBankTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeutscheBankTestAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DeutscheBankTestAppTests/Pods-DeutscheBankTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86A72F732A4D80BC005ED681 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		86A72F752A4D8152005ED681 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		86A72F782A4D81E8005ED681 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		86A72F7C2A4D82CF005ED681 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		86A72F7E2A4D8364005ED681 /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
+		86A72F852A4D840C005ED681 /* PostAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIModel.swift; sourceTree = "<group>"; };
+		86A72F872A4D8419005ED681 /* CommentAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPIModel.swift; sourceTree = "<group>"; };
+		86A72F8D2A4D84E5005ED681 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		86A72F8F2A4D8685005ED681 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		86A72F922A4D91FE005ED681 /* PostsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkService.swift; sourceTree = "<group>"; };
+		86A72F952A4D93C3005ED681 /* PostNetworkService+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostNetworkService+Requests.swift"; sourceTree = "<group>"; };
+		86A72F972A4D93D7005ED681 /* CommentsNetworkService+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentsNetworkService+Requests.swift"; sourceTree = "<group>"; };
+		86A72F992A4D94FB005ED681 /* CommentsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsNetworkService.swift; sourceTree = "<group>"; };
+		86A72F9B2A4D9817005ED681 /* CommentsNetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsNetworkServiceTest.swift; sourceTree = "<group>"; };
+		86A72F9D2A4D9830005ED681 /* PostsNetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkServiceTest.swift; sourceTree = "<group>"; };
+		86A72F9F2A4D9A49005ED681 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkSession.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BD2A4D7B6D00B09323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +100,128 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86A72F772A4D81DB005ED681 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F782A4D81E8005ED681 /* Constants.swift */,
+				86A72F8F2A4D8685005ED681 /* ServiceLocator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		86A72F7A2A4D8297005ED681 /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F7B2A4D82BA005ED681 /* Network */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		86A72F7B2A4D82BA005ED681 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FA12A4DB7AD005ED681 /* Mock */,
+				86A72F7E2A4D8364005ED681 /* NetworkServiceTest.swift */,
+				86A72F9B2A4D9817005ED681 /* CommentsNetworkServiceTest.swift */,
+				86A72F9D2A4D9830005ED681 /* PostsNetworkServiceTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		86A72F812A4D83B9005ED681 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F822A4D83C1005ED681 /* Models */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		86A72F822A4D83C1005ED681 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F842A4D83D3005ED681 /* Persistent */,
+				86A72F832A4D83C7005ED681 /* API */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86A72F832A4D83C7005ED681 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F852A4D840C005ED681 /* PostAPIModel.swift */,
+				86A72F872A4D8419005ED681 /* CommentAPIModel.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		86A72F842A4D83D3005ED681 /* Persistent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistent;
+			sourceTree = "<group>";
+		};
+		86A72F892A4D8462005ED681 /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F8C2A4D84D3005ED681 /* LoginView */,
+				86A72F8B2A4D84CC005ED681 /* CommentsView */,
+				86A72F8A2A4D84C0005ED681 /* PostsView */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
+		86A72F8A2A4D84C0005ED681 /* PostsView */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F8D2A4D84E5005ED681 /* PostsViewModel.swift */,
+			);
+			path = PostsView;
+			sourceTree = "<group>";
+		};
+		86A72F8B2A4D84CC005ED681 /* CommentsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommentsView;
+			sourceTree = "<group>";
+		};
+		86A72F8C2A4D84D3005ED681 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		86A72F912A4D9170005ED681 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F752A4D8152005ED681 /* NetworkService.swift */,
+				86A72F922A4D91FE005ED681 /* PostsNetworkService.swift */,
+				86A72F992A4D94FB005ED681 /* CommentsNetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		86A72F942A4D93A2005ED681 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F732A4D80BC005ED681 /* Request.swift */,
+				86A72F952A4D93C3005ED681 /* PostNetworkService+Requests.swift */,
+				86A72F972A4D93D7005ED681 /* CommentsNetworkService+Requests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		86A72FA12A4DB7AD005ED681 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				86A72F7C2A4D82CF005ED681 /* MockNetworkService.swift */,
+				86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		86D391AF2A4D7B6D00B09323 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +245,9 @@
 		86D391BA2A4D7B6D00B09323 /* DeutscheBankTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				86A72F892A4D8462005ED681 /* ViewLayer */,
+				86A72F812A4D83B9005ED681 /* DataLayer */,
+				86A72F772A4D81DB005ED681 /* Helpers */,
 				86D391EA2A4D7D5600B09323 /* NetworkLayer */,
 				86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */,
 				86D391BD2A4D7B6D00B09323 /* ContentView.swift */,
@@ -111,6 +270,7 @@
 		86D391D02A4D7B6E00B09323 /* DeutscheBankTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				86A72F7A2A4D8297005ED681 /* ServiceTests */,
 				86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */,
 			);
 			path = DeutscheBankTestAppTests;
@@ -119,6 +279,9 @@
 		86D391EA2A4D7D5600B09323 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				86A72F942A4D93A2005ED681 /* Requests */,
+				86A72F912A4D9170005ED681 /* Services */,
+				86A72F9F2A4D9A49005ED681 /* NetworkSession.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -140,7 +303,6 @@
 				72EDCEFAC79079575C6F5197 /* Pods-DeutscheBankTestAppTests.debug.xcconfig */,
 				145BFD8A26CC79D84EE0D87C /* Pods-DeutscheBankTestAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -313,7 +475,19 @@
 			files = (
 				86D391C82A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld in Sources */,
 				86D391C52A4D7B6E00B09323 /* Persistence.swift in Sources */,
+				86A72F742A4D80BC005ED681 /* Request.swift in Sources */,
+				86A72F902A4D8685005ED681 /* ServiceLocator.swift in Sources */,
+				86A72F932A4D91FE005ED681 /* PostsNetworkService.swift in Sources */,
 				86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */,
+				86A72F792A4D81E8005ED681 /* Constants.swift in Sources */,
+				86A72F762A4D8152005ED681 /* NetworkService.swift in Sources */,
+				86A72F982A4D93D7005ED681 /* CommentsNetworkService+Requests.swift in Sources */,
+				86A72F8E2A4D84E5005ED681 /* PostsViewModel.swift in Sources */,
+				86A72F882A4D8419005ED681 /* CommentAPIModel.swift in Sources */,
+				86A72F862A4D840C005ED681 /* PostAPIModel.swift in Sources */,
+				86A72F962A4D93C3005ED681 /* PostNetworkService+Requests.swift in Sources */,
+				86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */,
+				86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */,
 				86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +496,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A72F9C2A4D9817005ED681 /* CommentsNetworkServiceTest.swift in Sources */,
+				86A72FA32A4DB7BB005ED681 /* MockNetworkSession.swift in Sources */,
+				86A72F7F2A4D8364005ED681 /* NetworkServiceTest.swift in Sources */,
+				86A72F7D2A4D82CF005ED681 /* MockNetworkService.swift in Sources */,
 				86D391D22A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift in Sources */,
+				86A72F9E2A4D9830005ED681 /* PostsNetworkServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
