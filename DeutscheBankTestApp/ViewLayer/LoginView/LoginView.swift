@@ -9,35 +9,28 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var userID: String = ""
-
+    @EnvironmentObject var userSession: UserSession
+    @State private var inputUserID: String = ""
+    
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
-                TextField(LocalizableManager.enterUserID, text: $userID)
+                TextField(LocalizableManager.enterUserID, text: $inputUserID)
                     .keyboardType(.numberPad)
                     .padding()
-                    .cornerRadius(Constants.UIConstants.baseCornerRadius)
-                    .border(Color.gray, width: 0.5)
-                Spacer()
-                NavigationLink(destination: PostsView(viewModel: PostsViewModel(userID: Int(self.userID) ?? 0))) {
-                    Text(LocalizableManager.showPosts)
+                    .border(.gray)
+                
+                Button(LocalizableManager.showPosts) {
+                    self.userSession.userID = Int(self.inputUserID)
+                    self.userSession.isLoggedIn = true
                 }
                 .padding()
                 .background(Color.blue)
-                .foregroundColor(.white)
+                .foregroundColor(Color.white)
                 .cornerRadius(Constants.UIConstants.baseCornerRadius)
-                Spacer()
             }
-            .padding()
             .navigationBarTitle(LocalizableManager.welcomeTitle)
         }
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+        .padding()
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct DeutscheBankTestAppDelegate: App {
     
+    @StateObject private var userSession = UserSession()
+    
     init() {
         self.addDependencies()
     }
@@ -19,7 +21,8 @@ struct DeutscheBankTestAppDelegate: App {
     var body: some Scene {
         
         WindowGroup {
-            LoginView()
+            EntryView()
+                .environmentObject(userSession)
         }
     }
 

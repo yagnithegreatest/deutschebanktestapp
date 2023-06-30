@@ -35,6 +35,10 @@
 		86A72FB92A4DD3DB005ED681 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FB82A4DD3DB005ED681 /* FontManager.swift */; };
 		86A72FBB2A4DD5F6005ED681 /* FavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FBA2A4DD5F6005ED681 /* FavButton.swift */; };
 		86A72FBD2A4DD6BB005ED681 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */; };
+		86A72FC02A4DDD02005ED681 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FBF2A4DDD02005ED681 /* MainTabView.swift */; };
+		86A72FC22A4DE7A6005ED681 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FC12A4DE7A6005ED681 /* EmptyStateView.swift */; };
+		86A72FC42A4EDD47005ED681 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FC32A4EDD47005ED681 /* EntryView.swift */; };
+		86A72FC62A4EDEA8005ED681 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FC52A4EDEA8005ED681 /* UserSession.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391BE2A4D7B6D00B09323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BD2A4D7B6D00B09323 /* ContentView.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
@@ -87,6 +91,10 @@
 		86A72FB82A4DD3DB005ED681 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		86A72FBA2A4DD5F6005ED681 /* FavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavButton.swift; sourceTree = "<group>"; };
 		86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		86A72FBF2A4DDD02005ED681 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		86A72FC12A4DE7A6005ED681 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		86A72FC32A4EDD47005ED681 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		86A72FC52A4EDEA8005ED681 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BD2A4D7B6D00B09323 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				86A72F822A4D83C1005ED681 /* Models */,
+				86A72FC52A4EDEA8005ED681 /* UserSession.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -185,10 +194,13 @@
 		86A72F892A4D8462005ED681 /* ViewLayer */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FBE2A4DDCF4005ED681 /* TabView */,
 				86A72FA82A4DBF85005ED681 /* LoadingView */,
 				86A72F8C2A4D84D3005ED681 /* LoginView */,
 				86A72F8B2A4D84CC005ED681 /* CommentsView */,
 				86A72F8A2A4D84C0005ED681 /* PostsView */,
+				86A72FC12A4DE7A6005ED681 /* EmptyStateView.swift */,
+				86A72FC32A4EDD47005ED681 /* EntryView.swift */,
 			);
 			path = ViewLayer;
 			sourceTree = "<group>";
@@ -282,6 +294,14 @@
 				86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		86A72FBE2A4DDCF4005ED681 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FBF2A4DDD02005ED681 /* MainTabView.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 		86D391AF2A4D7B6D00B09323 = {
@@ -538,6 +558,8 @@
 			files = (
 				86D391C82A4D7B6E00B09323 /* DeutscheBankTestApp.xcdatamodeld in Sources */,
 				86D391C52A4D7B6E00B09323 /* Persistence.swift in Sources */,
+				86A72FC62A4EDEA8005ED681 /* UserSession.swift in Sources */,
+				86A72FC02A4DDD02005ED681 /* MainTabView.swift in Sources */,
 				86A72F742A4D80BC005ED681 /* Request.swift in Sources */,
 				86A72F902A4D8685005ED681 /* ServiceLocator.swift in Sources */,
 				86A72FAA2A4DBF98005ED681 /* LoadingView.swift in Sources */,
@@ -546,6 +568,7 @@
 				86A72FAC2A4DBFD6005ED681 /* ErrorView.swift in Sources */,
 				86A72F792A4D81E8005ED681 /* Constants.swift in Sources */,
 				86A72F762A4D8152005ED681 /* NetworkService.swift in Sources */,
+				86A72FC42A4EDD47005ED681 /* EntryView.swift in Sources */,
 				86A72FB72A4DCF6A005ED681 /* SinglePostView.swift in Sources */,
 				86A72FBB2A4DD5F6005ED681 /* FavButton.swift in Sources */,
 				86A72F982A4D93D7005ED681 /* CommentsNetworkService+Requests.swift in Sources */,
@@ -553,6 +576,7 @@
 				86A72F882A4D8419005ED681 /* CommentAPIModel.swift in Sources */,
 				86A72F862A4D840C005ED681 /* PostAPIModel.swift in Sources */,
 				86A72F962A4D93C3005ED681 /* PostNetworkService+Requests.swift in Sources */,
+				86A72FC22A4DE7A6005ED681 /* EmptyStateView.swift in Sources */,
 				86A72FB92A4DD3DB005ED681 /* FontManager.swift in Sources */,
 				86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */,
 				86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */,

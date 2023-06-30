@@ -17,7 +17,6 @@ struct SinglePostView: View {
         HStack {
             
             VStack(alignment: .leading) {
-                
                 Text(post.title)
                     .font(FontManager.mainTitleFont)
                     .padding([.bottom, .top], Constants.UIConstants.defaultPadding)
@@ -25,14 +24,13 @@ struct SinglePostView: View {
                 Text(LocalizableManager.spacer + post.body)
                     .font(FontManager.mainBodyFont)
                     .foregroundColor(Color.gray)
-                
+
                 Spacer()
             }
             
             Spacer()
             
             VStack {
-                
                 FavButton(isFavorite: self.isFav)
                     .padding([.leading, .top])
                 

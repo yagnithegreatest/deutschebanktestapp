@@ -7,39 +7,42 @@
 
 import Foundation
 
-class PostsViewModel: ObservableObject {
+enum ViewModelState {
+
+    case loading
+    case loaded
+    case error(Error)
+}
+
+final class PostsViewModel: ObservableObject {
     
     @Published var posts: [Post] = []
-    @Published var isLoading = false
-    @Published var error: Error?
-    @Published var errorViewTitle: String? = nil
+    @Published var state: ViewModelState = .loading
+    @Published var title: String
     
-    private var userID: Int
-
     private let networkService: PostsNetworkServiceProtocol
+    private let userID: Int
     
-    init(networkService: PostsNetworkServiceProtocol = ServiceLocator.shared.getService(), userID: Int) {
-        
+    init(userID: Int, title: String, networkService: PostsNetworkServiceProtocol = ServiceLocator.shared.getService()) {
         self.networkService = networkService
         self.userID = userID
+        self.title = title
     }
     
-    func fetchPosts(userId: Int) {
+    func fetchPosts() {
         
-        self.isLoading = true
+        guard case .loading = self.state else { return }
         
-        self.networkService.fetchPosts(userId: userId) { result in
+        self.networkService.fetchPosts(userId: self.userID) { [weak self] result in
             
             DispatchQueue.main.async {
                 
-                self.isLoading = false
                 switch result {
                 case .success(let posts):
-                    self.posts = posts
+                    self?.posts = posts
+                    self?.state = .loaded
                 case .failure(let error):
-                    
-                    self.error = error
-                    self.errorViewTitle = "Error loading posts"
+                    self?.state = .error(error)
                 }
             }
         }

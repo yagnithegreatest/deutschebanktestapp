@@ -9,28 +9,49 @@ import SwiftUI
 
 struct PostsView: View {
     
+    @EnvironmentObject var userSession: UserSession
     @ObservedObject var viewModel: PostsViewModel
     
     var body: some View {
         Group {
-            if self.viewModel.isLoading {
+            switch self.viewModel.state {
+            case .loading:
                 LoadingView()
-            } else {
-                Group {
-                    if let error = self.viewModel.error {
-                        ErrorView(error: error, title: self.viewModel.errorViewTitle)
-                    } else {
-                        
-                        List(self.viewModel.posts, id: \.id) { post in
-                            SinglePostView(post: post)
-                        }
-                        .navigationTitle(LocalizableManager.myPostsTitle)
-                    }
+            case .loaded:
+                
+                if self.viewModel.posts.isEmpty {
+                    EmptyStateView(title: LocalizableManager.noPostsForThisUser)
+                } else {
+                    self.postsList()
                 }
+            case .error(let error):
+                ErrorView(error: error)
             }
         }
         .onAppear {
-            self.viewModel.fetchPosts(userId: 1)
+            if case .loading = self.viewModel.state {
+                self.viewModel.fetchPosts()
+            }
         }
+        .navigationBarItems(trailing: logoutButton)
+    }
+    
+    private var logoutButton: some View {
+        
+        Button(action: {
+            self.userSession.isLoggedIn = false
+        }) {
+            Text(LocalizableManager.logout)
+            Image(systemName: "house.fill")
+                .foregroundColor(.blue)
+        }
+    }
+    
+    private func postsList() -> some View {
+        
+        List(self.viewModel.posts, id: \.id) { post in
+            SinglePostView(post: post)
+        }
+        .navigationTitle(self.viewModel.title)
     }
 }

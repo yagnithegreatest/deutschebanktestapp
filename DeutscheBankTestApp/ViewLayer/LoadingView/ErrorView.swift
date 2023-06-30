@@ -11,15 +11,13 @@ struct ErrorView: View {
     
     let error: Error
     
-    let title: String?
-    
     var body: some View {
         
         VStack {
             Image(systemName: "exclamationmark.triangle")
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(self.title ?? LocalizableManager.basicErrorTitle)
+            Text(LocalizableManager.basicErrorTitle)
                 .font(.title)
                 .padding(.top)
             Text(self.error.localizedDescription)

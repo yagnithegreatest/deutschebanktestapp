@@ -27,6 +27,10 @@
 /* Loading view */
 "basic_loading_title" = "Loading...";
 
+/* Empty state view */
+"no_posts_for_this_user" = "Sorry, nothing found for this user. Please use another UserID and try again";
+
 
 /* Common */
 "spacer" = "    ";
+"logout" = "Logout";

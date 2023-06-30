@@ -29,7 +29,7 @@ struct LocalizableManager {
         NSLocalizedString("All", comment: "")
     }
     
-    static var Favorite: String {
+    static var favorite: String {
         NSLocalizedString("Favorite", comment: "")
     }
     
@@ -47,5 +47,13 @@ struct LocalizableManager {
     
     static var spacer: String {
         NSLocalizedString("spacer", comment: "")
+    }
+    
+    static var noPostsForThisUser: String {
+        NSLocalizedString("no_posts_for_this_user", comment: "")
+    }
+    
+    static var logout: String {
+        NSLocalizedString("logout", comment: "")
     }
 }

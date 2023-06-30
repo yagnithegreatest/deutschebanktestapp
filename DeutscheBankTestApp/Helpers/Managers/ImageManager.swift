@@ -16,4 +16,8 @@ struct ImageManager {
     static var starFilled: String {
         return "star.fill"
     }
+    
+    static var list: String {
+        return "list.dash"
+    }
 }
