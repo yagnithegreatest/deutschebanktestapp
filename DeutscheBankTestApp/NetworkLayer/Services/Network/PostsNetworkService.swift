@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PostsNetworkServiceProtocol {
-    func fetchPosts(userId: Int, completion: @escaping (Result<[Post], Error>) -> Void)
+    func fetchPosts(userId: Int, completion: @escaping (Result<[PostAPIModel], Error>) -> Void)
 }
 
 class PostsNetworkService: PostsNetworkServiceProtocol {
@@ -19,7 +19,7 @@ class PostsNetworkService: PostsNetworkServiceProtocol {
         self.networkService = networkService
     }
     
-    func fetchPosts(userId: Int, completion: @escaping (Result<[Post], Error>) -> Void) {
+    func fetchPosts(userId: Int, completion: @escaping (Result<[PostAPIModel], Error>) -> Void) {
         let request = PostsRequest(userId: userId)
         networkService.request(request, completion: completion)
     }

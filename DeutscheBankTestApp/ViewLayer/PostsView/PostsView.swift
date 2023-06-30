@@ -29,11 +29,14 @@ struct PostsView: View {
             }
         }
         .onAppear {
+            if self.viewModel.fetchFavoritesOnly {
+                self.viewModel.state = .loading
+            }
             if case .loading = self.viewModel.state {
                 self.viewModel.fetchPosts()
             }
         }
-        .navigationBarItems(trailing: logoutButton)
+        .navigationBarItems(trailing: self.logoutButton)
     }
     
     private var logoutButton: some View {
@@ -42,15 +45,18 @@ struct PostsView: View {
             self.userSession.isLoggedIn = false
         }) {
             Text(LocalizableManager.logout)
-            Image(systemName: "house.fill")
+            Image(systemName: ImageManager.houseFill)
                 .foregroundColor(.blue)
         }
     }
     
     private func postsList() -> some View {
-        
-        List(self.viewModel.posts, id: \.id) { post in
-            SinglePostView(post: post)
+        List {
+            ForEach(Array(self.viewModel.posts.enumerated()), id: \.1.id) { index, post in
+                SinglePostView(post: post) { updatedPost in
+                    self.viewModel.toggleFavorite(at: index, with: updatedPost)
+                }
+            }
         }
         .navigationTitle(self.viewModel.title)
     }

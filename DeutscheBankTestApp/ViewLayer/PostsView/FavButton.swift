@@ -9,13 +9,12 @@ import SwiftUI
 
 struct FavButton: View {
     
-    @State var isFavorite: Bool
+    var isFavorite: Bool
+    var onTap: () -> Void
     
     var body: some View {
         
-        Button(action: {
-            self.isFavorite.toggle()
-        }) {
+        Button(action: self.onTap) {
             
             Image(systemName: self.isFavorite ? ImageManager.starFilled : ImageManager.starEmpty)
                 .resizable()

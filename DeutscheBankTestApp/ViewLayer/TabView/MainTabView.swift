@@ -26,13 +26,14 @@ struct MainTabView: View {
             .tag(0)
             
             NavigationView {
-                PostsView(viewModel: PostsViewModel(userID: self.userSession.userID ?? 2, title: LocalizableManager.favorite))
+                PostsView(viewModel: PostsViewModel(userID: self.userSession.userID ?? 2, title: LocalizableManager.favorite, fetchFavoritesOnly: true))
             }
             .tabItem {
                 Image(systemName: ImageManager.starFilled)
                 Text(LocalizableManager.favorite)
             }
             .tag(1)
+            
         }
     }
 }

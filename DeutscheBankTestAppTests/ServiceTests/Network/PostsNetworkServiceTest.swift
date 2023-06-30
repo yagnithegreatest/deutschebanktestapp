@@ -12,14 +12,14 @@ final class PostsNetworkServiceTest: XCTestCase {
     
     func testFetchPosts() {
 
-        let expectedPosts = [Post(userId: 1, id: 1, title: "Test", body: "Test")]
+        let expectedPosts = [PostAPIModel(userId: 1, id: 1, title: "Test", body: "Test")]
         
-        let mockNetworkService = MockNetworkService<[Post]>()
+        let mockNetworkService = MockNetworkService<[PostAPIModel]>()
         mockNetworkService.result = .success(expectedPosts)
         
         let service = PostsNetworkService(networkService: mockNetworkService)
         
-        var postArray: [Post]?
+        var postArray: [PostAPIModel]?
         
         service.fetchPosts(userId: 1) { result in
             

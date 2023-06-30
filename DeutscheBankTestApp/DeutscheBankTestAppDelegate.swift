@@ -15,14 +15,12 @@ struct DeutscheBankTestAppDelegate: App {
     init() {
         self.addDependencies()
     }
-    
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         
         WindowGroup {
             EntryView()
-                .environmentObject(userSession)
+                .environmentObject(self.userSession)
         }
     }
 
@@ -36,5 +34,8 @@ struct DeutscheBankTestAppDelegate: App {
 
         let commentsNetworkService = CommentsNetworkService(networkService: networkService)
         ServiceLocator.shared.addService(commentsNetworkService as CommentsNetworkServiceProtocol)
+        
+        let postDataManager = PostDataManager()
+        ServiceLocator.shared.addService(postDataManager as PostDataManagerProtocol)
     }
 }

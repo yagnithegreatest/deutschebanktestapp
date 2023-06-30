@@ -12,7 +12,7 @@ final class NetworkServiceTest: XCTestCase {
     
     func testNetworkService() {
 
-        let expectedPost = Post(userId: 1, id: 1, title: "Test", body: "Test")
+        let expectedPost = PostAPIModel(userId: 1, id: 1, title: "Test", body: "Test")
         let mockSession = MockNetworkSession()
         
         mockSession.requestHandler = { _, _, _, _, _ in
@@ -25,7 +25,7 @@ final class NetworkServiceTest: XCTestCase {
         let request = PostsRequest(userId: 1)
         
 
-        networkService.request(request) { (result: Result<[Post], Error>) in
+        networkService.request(request) { (result: Result<[PostAPIModel], Error>) in
 
             switch result {
                 

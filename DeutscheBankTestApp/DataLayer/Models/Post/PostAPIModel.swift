@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post: Codable, Identifiable, Equatable {
+struct PostAPIModel: Codable, Identifiable, Equatable {
     
     let userId: Int
     let id: Int

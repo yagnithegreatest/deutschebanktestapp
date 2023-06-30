@@ -20,4 +20,8 @@ struct ImageManager {
     static var list: String {
         return "list.dash"
     }
+    
+    static var houseFill: String {
+        return "house.fill"
+    }
 }

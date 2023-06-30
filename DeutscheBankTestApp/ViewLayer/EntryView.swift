@@ -13,9 +13,9 @@ struct EntryView: View {
 
     var body: some View {
         if self.userSession.isLoggedIn {
-            MainTabView().environmentObject(userSession)
+            MainTabView().environmentObject(self.userSession)
         } else {
-            LoginView().environmentObject(userSession)
+            LoginView().environmentObject(self.userSession)
         }
     }
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SinglePostView: View {
     
-    @State var post: Post
-    @State var isFav: Bool = false
+    @ObservedObject var post: Post
+    let toggleFavorite: (Post) -> Void
     
     var body: some View {
         
@@ -24,15 +24,17 @@ struct SinglePostView: View {
                 Text(LocalizableManager.spacer + post.body)
                     .font(FontManager.mainBodyFont)
                     .foregroundColor(Color.gray)
-
+                
                 Spacer()
             }
             
             Spacer()
             
             VStack {
-                FavButton(isFavorite: self.isFav)
-                    .padding([.leading, .top])
+                FavButton(isFavorite: self.post.isFavorite) {
+                    self.toggleFavorite(self.post)
+                }
+                .padding([.leading, .top])
                 
                 Spacer()
             }
