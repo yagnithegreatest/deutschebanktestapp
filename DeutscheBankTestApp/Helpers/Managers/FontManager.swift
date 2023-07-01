@@ -16,4 +16,8 @@ struct FontManager {
     static var mainBodyFont: Font {
         return Font.system(size: 12, weight: .light)
     }
+    
+    static var lightSecondaryFont: Font {
+        return Font.system(size: 11, weight: .ultraLight)
+    }
 }

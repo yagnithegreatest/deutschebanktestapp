@@ -24,4 +24,8 @@ struct ImageManager {
     static var houseFill: String {
         return "house.fill"
     }
+    
+    static var errorMark: String {
+        return "exclamationmark.triangle"
+    }
 }

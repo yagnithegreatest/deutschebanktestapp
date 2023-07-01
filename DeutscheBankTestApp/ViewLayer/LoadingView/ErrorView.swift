@@ -14,7 +14,7 @@ struct ErrorView: View {
     var body: some View {
         
         VStack {
-            Image(systemName: "exclamationmark.triangle")
+            Image(systemName: ImageManager.errorMark)
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(LocalizableManager.basicErrorTitle)

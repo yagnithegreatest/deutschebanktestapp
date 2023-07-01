@@ -28,6 +28,8 @@ struct LoginView: View {
                 .background(Color.blue)
                 .foregroundColor(Color.white)
                 .cornerRadius(Constants.UIConstants.baseCornerRadius)
+                .opacity(self.inputUserID.isEmpty ? 0.5 : 1.0)
+                .disabled(self.inputUserID.isEmpty)
             }
             .navigationBarTitle(LocalizableManager.welcomeTitle)
         }

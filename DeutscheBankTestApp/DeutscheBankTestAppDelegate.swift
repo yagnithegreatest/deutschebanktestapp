@@ -37,5 +37,8 @@ struct DeutscheBankTestAppDelegate: App {
         
         let postDataManager = PostDataManager()
         ServiceLocator.shared.addService(postDataManager as PostDataManagerProtocol)
+        
+        let coreDataManager = CoreDataManager()
+        ServiceLocator.shared.addService(coreDataManager as CoreDataManagerProtocol)
     }
 }

@@ -17,6 +17,10 @@ struct SinglePostView: View {
         HStack {
             
             VStack(alignment: .leading) {
+                Text("UserID: \(post.userId), ID: \(post.id)")
+                    .font(FontManager.lightSecondaryFont)
+                    .padding(.top, Constants.UIConstants.defaultPadding)
+                
                 Text(post.title)
                     .font(FontManager.mainTitleFont)
                     .padding([.bottom, .top], Constants.UIConstants.defaultPadding)
