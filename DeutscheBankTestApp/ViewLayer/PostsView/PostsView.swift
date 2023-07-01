@@ -20,7 +20,7 @@ struct PostsView: View {
             case .loaded:
                 
                 if self.viewModel.posts.isEmpty {
-                    EmptyStateView(title: LocalizableManager.noPostsForThisUser)
+                    EmptyStateView(title: self.viewModel.fetchFavoritesOnly ? LocalizableManager.noFavoritesYet : LocalizableManager.noPostsForThisUser)
                 } else {
                     self.postsList()
                 }
@@ -29,12 +29,9 @@ struct PostsView: View {
             }
         }
         .onAppear {
-            if self.viewModel.fetchFavoritesOnly {
-                self.viewModel.state = .loading
-            }
-            if case .loading = self.viewModel.state {
-                self.viewModel.fetchPosts()
-            }
+            // Update the posts fav status every time switching the tabs
+            self.viewModel.state = .loading
+            self.viewModel.fetchPosts()
         }
         .navigationBarItems(trailing: self.logoutButton)
     }

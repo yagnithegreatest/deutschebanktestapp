@@ -23,7 +23,8 @@
 
 /* Error view */
 "basic_error_title" = "Oops! An error occurred...";
-
+"no_favorites_yet" = "No favorite posts yet. Please mark something as favorite and try again.";
+ 
 /* Loading view */
 "basic_loading_title" = "Loading...";
 

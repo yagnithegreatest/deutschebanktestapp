@@ -10,30 +10,42 @@ import XCTest
 
 final class NetworkServiceTest: XCTestCase {
     
+    var mockSession: MockNetworkSession!
+    
+    override func setUp() {
+        super.setUp()
+        self.mockSession = MockNetworkSession()
+    }
+    
+    override func tearDown() {
+        self.mockSession = nil
+        super.tearDown()
+    }
+    
     func testNetworkService() {
-
-        let expectedPost = PostAPIModel(userId: 1, id: 1, title: "Test", body: "Test")
-        let mockSession = MockNetworkSession()
+        let expectation = self.expectation(description: "Network Service Test")
         
-        mockSession.requestHandler = { _, _, _, _, _ in
+        let expectedPost = PostAPIModel(userId: 1, id: 1, title: "Test", body: "Test")
+        self.mockSession.requestHandler = { _, _, _, _, _ in
             let encoder = JSONEncoder()
             let data = try! encoder.encode([expectedPost])
             return (data, nil)
         }
         
-        let networkService = NetworkService(networkSession: mockSession)
+        let networkService = NetworkService(networkSession: self.mockSession)
         let request = PostsRequest(userId: 1)
         
-
         networkService.request(request) { (result: Result<[PostAPIModel], Error>) in
-
             switch result {
-                
             case .success(let posts):
                 XCTAssertEqual(posts, [expectedPost])
             case .failure:
                 XCTFail("Expected successful response")
             }
+            expectation.fulfill()
         }
+        
+        waitForExpectations(timeout: 5.0)
     }
 }
+

@@ -9,7 +9,7 @@
 import Alamofire
 import Foundation
 
-class MockNetworkSession: NetworkSessionProtocol {
+final class MockNetworkSession: NetworkSessionProtocol {
     
     var requestHandler: (
         (URLConvertible,

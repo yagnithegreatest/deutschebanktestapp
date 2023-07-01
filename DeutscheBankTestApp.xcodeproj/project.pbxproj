@@ -42,6 +42,12 @@
 		86A72FCD2A4F0F56005ED681 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FCC2A4F0F56005ED681 /* CoreDataManager.swift */; };
 		86A72FD52A4F1121005ED681 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FD42A4F1121005ED681 /* Post.swift */; };
 		86A72FD92A4F1C84005ED681 /* PostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FD82A4F1C84005ED681 /* PostDataManager.swift */; };
+		86A72FDB2A5062FC005ED681 /* MockPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FDA2A5062FC005ED681 /* MockPostDataManager.swift */; };
+		86A72FDD2A50638E005ED681 /* MockPostsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FDC2A50638E005ED681 /* MockPostsNetworkService.swift */; };
+		86A72FE02A506406005ED681 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FDF2A506406005ED681 /* PostsViewModelTests.swift */; };
+		86A72FE32A5066AA005ED681 /* MockPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FE22A5066AA005ED681 /* MockPostsViewModel.swift */; };
+		86A72FEB2A507222005ED681 /* MockCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FEA2A507222005ED681 /* MockCoreDataManager.swift */; };
+		86A72FEE2A507262005ED681 /* PostDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FED2A507262005ED681 /* PostDataManagerTests.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
 		86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */; };
@@ -99,6 +105,12 @@
 		86A72FCC2A4F0F56005ED681 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		86A72FD42A4F1121005ED681 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		86A72FD82A4F1C84005ED681 /* PostDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataManager.swift; sourceTree = "<group>"; };
+		86A72FDA2A5062FC005ED681 /* MockPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDataManager.swift; sourceTree = "<group>"; };
+		86A72FDC2A50638E005ED681 /* MockPostsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsNetworkService.swift; sourceTree = "<group>"; };
+		86A72FDF2A506406005ED681 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
+		86A72FE22A5066AA005ED681 /* MockPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsViewModel.swift; sourceTree = "<group>"; };
+		86A72FEA2A507222005ED681 /* MockCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataManager.swift; sourceTree = "<group>"; };
+		86A72FED2A507262005ED681 /* PostDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataManagerTests.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BF2A4D7B6E00B09323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,7 +164,6 @@
 		86A72F7B2A4D82BA005ED681 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				86A72FA12A4DB7AD005ED681 /* Mock */,
 				86A72F7E2A4D8364005ED681 /* NetworkServiceTest.swift */,
 				86A72F9B2A4D9817005ED681 /* CommentsNetworkServiceTest.swift */,
 				86A72F9D2A4D9830005ED681 /* PostsNetworkServiceTest.swift */,
@@ -239,8 +250,9 @@
 		86A72FA12A4DB7AD005ED681 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				86A72F7C2A4D82CF005ED681 /* MockNetworkService.swift */,
-				86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */,
+				86A72FE72A506ED7005ED681 /* ViewModel */,
+				86A72FE62A506ED1005ED681 /* Manager */,
+				86A72FE52A506ECC005ED681 /* Service */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -324,6 +336,49 @@
 			path = Comment;
 			sourceTree = "<group>";
 		};
+		86A72FE42A506E95005ED681 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FDF2A506406005ED681 /* PostsViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		86A72FE52A506ECC005ED681 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FDC2A50638E005ED681 /* MockPostsNetworkService.swift */,
+				86A72F7C2A4D82CF005ED681 /* MockNetworkService.swift */,
+				86A72FA22A4DB7BB005ED681 /* MockNetworkSession.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		86A72FE62A506ED1005ED681 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FDA2A5062FC005ED681 /* MockPostDataManager.swift */,
+				86A72FEA2A507222005ED681 /* MockCoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		86A72FE72A506ED7005ED681 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FE22A5066AA005ED681 /* MockPostsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86A72FEC2A507250005ED681 /* ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				86A72FED2A507262005ED681 /* PostDataManagerTests.swift */,
+			);
+			path = ManagerTests;
+			sourceTree = "<group>";
+		};
 		86D391AF2A4D7B6D00B09323 = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +426,9 @@
 		86D391D02A4D7B6E00B09323 /* DeutscheBankTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FEC2A507250005ED681 /* ManagerTests */,
+				86A72FA12A4DB7AD005ED681 /* Mock */,
+				86A72FE42A506E95005ED681 /* ViewModelTests */,
 				86A72F7A2A4D8297005ED681 /* ServiceTests */,
 				86D391D12A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift */,
 			);
@@ -613,10 +671,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				86A72F9C2A4D9817005ED681 /* CommentsNetworkServiceTest.swift in Sources */,
+				86A72FEB2A507222005ED681 /* MockCoreDataManager.swift in Sources */,
 				86A72FA32A4DB7BB005ED681 /* MockNetworkSession.swift in Sources */,
+				86A72FDB2A5062FC005ED681 /* MockPostDataManager.swift in Sources */,
 				86A72F7F2A4D8364005ED681 /* NetworkServiceTest.swift in Sources */,
 				86A72F7D2A4D82CF005ED681 /* MockNetworkService.swift in Sources */,
 				86D391D22A4D7B6E00B09323 /* DeutscheBankTestAppTests.swift in Sources */,
+				86A72FEE2A507262005ED681 /* PostDataManagerTests.swift in Sources */,
+				86A72FE32A5066AA005ED681 /* MockPostsViewModel.swift in Sources */,
+				86A72FE02A506406005ED681 /* PostsViewModelTests.swift in Sources */,
+				86A72FDD2A50638E005ED681 /* MockPostsNetworkService.swift in Sources */,
 				86A72F9E2A4D9830005ED681 /* PostsNetworkServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

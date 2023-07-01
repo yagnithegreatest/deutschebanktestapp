@@ -27,15 +27,18 @@ final class PostDataManager: PostDataManagerProtocol {
     }
 
     func isPostFavorited(id: Int, userID: Int) -> Result<Bool, Error> {
+        
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
             NSPredicate(format: "postId == %d", id),
             NSPredicate(format: "userId == %d", userID)
         ])
 
-        return self.coreDataManager.fetch(type: PostEntity.self, predicate: predicate).map { !$0.isEmpty }
+        return self.coreDataManager.fetch(type: PostEntity.self,
+                                          predicate: predicate).map { !$0.isEmpty }
     }
 
     func savePost(_ post: Post) -> Result<Void, Error> {
+        
         let postEntity = PostEntity(context: coreDataManager.container.viewContext)
         postEntity.postId = Int32(post.id)
         postEntity.userId = Int32(post.userId)
@@ -55,12 +58,14 @@ final class PostDataManager: PostDataManagerProtocol {
     }
 
     func fetchFavoritePosts() -> Result<[Post], Error> {
+        
         return self.coreDataManager.fetch(type: PostEntity.self, predicate: nil).map { entities in
             entities.map { Post(userId: Int($0.userId), id: Int($0.postId), title: $0.title ?? "", body: $0.body ?? "", isFavorite: true) }
         }
     }
     
     func deletePost(_ post: Post) -> Result<Void, Error> {
+        
         let predicate = NSPredicate(format: "postId == %d AND userId == %d", post.id, post.userId)
 
         let semaphore = DispatchSemaphore(value: 0)

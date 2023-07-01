@@ -14,15 +14,27 @@ enum ViewModelState {
     case error(Error)
 }
 
-final class PostsViewModel: ObservableObject {
+protocol PostsViewModelProtocol {
+    
+    var posts: [Post] { get }
+    var state: ViewModelState { get }
+    var title: String { get }
+    var networkService: PostsNetworkServiceProtocol { get }
+    var postDataManager: PostDataManagerProtocol { get }
+    
+    func fetchPosts()
+    func toggleFavorite(at index: Int, with post: Post)
+}
+
+final class PostsViewModel: ObservableObject, PostsViewModelProtocol {
     
     @Published var posts: [Post] = []
     @Published var state: ViewModelState = .loading
     @Published var title: String
     let fetchFavoritesOnly: Bool
     
-    private let networkService: PostsNetworkServiceProtocol
-    private let postDataManager: PostDataManagerProtocol
+    let networkService: PostsNetworkServiceProtocol
+    let postDataManager: PostDataManagerProtocol
     private let userID: Int
     
     init(

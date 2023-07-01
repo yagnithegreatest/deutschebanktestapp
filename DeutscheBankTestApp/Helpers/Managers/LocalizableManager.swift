@@ -56,4 +56,8 @@ struct LocalizableManager {
     static var logout: String {
         NSLocalizedString("logout", comment: "")
     }
+    
+    static var noFavoritesYet: String {
+        NSLocalizedString("no_favorites_yet", comment: "")
+    }
 }

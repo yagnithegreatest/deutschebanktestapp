@@ -10,27 +10,37 @@ import XCTest
 
 final class PostsNetworkServiceTest: XCTestCase {
     
-    func testFetchPosts() {
+    var mockNetworkService: MockNetworkService<[PostAPIModel]>!
+    var service: PostsNetworkService!
 
+    override func setUp() {
+        super.setUp()
+        self.mockNetworkService = MockNetworkService<[PostAPIModel]>()
+        self.service = PostsNetworkService(networkService: self.mockNetworkService)
+    }
+
+    override func tearDown() {
+        self.mockNetworkService = nil
+        self.service = nil
+        super.tearDown()
+    }
+
+    func testFetchPosts() {
+        let expectation = self.expectation(description: "Posts Network Service Test")
+        
         let expectedPosts = [PostAPIModel(userId: 1, id: 1, title: "Test", body: "Test")]
+        self.mockNetworkService.result = .success(expectedPosts)
         
-        let mockNetworkService = MockNetworkService<[PostAPIModel]>()
-        mockNetworkService.result = .success(expectedPosts)
-        
-        let service = PostsNetworkService(networkService: mockNetworkService)
-        
-        var postArray: [PostAPIModel]?
-        
-        service.fetchPosts(userId: 1) { result in
-            
+        self.service.fetchPosts(userId: 1) { result in
             switch result {
             case .success(let posts):
-                postArray = posts
+                XCTAssertEqual(posts, expectedPosts)
             case .failure:
-                postArray = nil
+                XCTFail("Expected successful response")
             }
+            expectation.fulfill()
         }
         
-        XCTAssertEqual(postArray, expectedPosts)
+        waitForExpectations(timeout: 5.0)
     }
 }

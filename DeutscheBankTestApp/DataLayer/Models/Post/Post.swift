@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Post: Identifiable, ObservableObject {
+class Post: Identifiable, ObservableObject, Equatable {
     
     init(
         userId: Int,
@@ -28,4 +28,8 @@ class Post: Identifiable, ObservableObject {
     let title: String
     let body: String
     @Published var isFavorite: Bool
+    
+    static func == (lhs: Post, rhs: Post) -> Bool {
+        return lhs.userId == rhs.userId && lhs.id == rhs.id
+    }
 }

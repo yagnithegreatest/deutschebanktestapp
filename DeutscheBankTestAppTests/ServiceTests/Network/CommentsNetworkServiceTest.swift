@@ -10,27 +10,38 @@ import XCTest
 
 final class CommentsNetworkServiceTest: XCTestCase {
     
-    func testFetchComments() {
+    var mockNetworkService: MockNetworkService<[Comment]>!
+    var service: CommentsNetworkService!
 
+    override func setUp() {
+        super.setUp()
+        self.mockNetworkService = MockNetworkService<[Comment]>()
+        self.service = CommentsNetworkService(networkService: self.mockNetworkService)
+    }
+
+    override func tearDown() {
+        self.mockNetworkService = nil
+        self.service = nil
+        super.tearDown()
+    }
+
+    func testFetchComments() {
+        
+        let expectation = self.expectation(description: "Comments Network Service Test")
+        
         let expectedComments = [Comment(postId: 1, id: 1, name: "Test", email: "test@email.com", body: "Comment body")]
+        self.mockNetworkService.result = .success(expectedComments)
         
-        let mockNetworkService = MockNetworkService<[Comment]>()
-        mockNetworkService.result = .success(expectedComments)
-        
-        let service = CommentsNetworkService(networkService: mockNetworkService)
-        
-        var postArray: [Comment]?
-        
-        service.fetchComments(postId: 1) { result in
-            
+        self.service.fetchComments(postId: 1) { result in
             switch result {
-            case .success(let posts):
-                postArray = posts
+            case .success(let comments):
+                XCTAssertEqual(comments, expectedComments)
             case .failure:
-                postArray = nil
+                XCTFail("Expected successful response")
             }
+            expectation.fulfill()
         }
         
-        XCTAssertEqual(postArray, expectedComments)
+        waitForExpectations(timeout: 5.0)
     }
 }
