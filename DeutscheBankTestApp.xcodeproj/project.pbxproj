@@ -48,6 +48,9 @@
 		86A72FE32A5066AA005ED681 /* MockPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FE22A5066AA005ED681 /* MockPostsViewModel.swift */; };
 		86A72FEB2A507222005ED681 /* MockCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FEA2A507222005ED681 /* MockCoreDataManager.swift */; };
 		86A72FEE2A507262005ED681 /* PostDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FED2A507262005ED681 /* PostDataManagerTests.swift */; };
+		86A72FF02A5076F2005ED681 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FEF2A5076F2005ED681 /* CommentsView.swift */; };
+		86A72FF22A5077F9005ED681 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF12A5077F9005ED681 /* CommentsViewModel.swift */; };
+		86A72FF52A507A58005ED681 /* SingleCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF42A507A58005ED681 /* SingleCommentView.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
 		86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */; };
@@ -111,6 +114,9 @@
 		86A72FE22A5066AA005ED681 /* MockPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsViewModel.swift; sourceTree = "<group>"; };
 		86A72FEA2A507222005ED681 /* MockCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataManager.swift; sourceTree = "<group>"; };
 		86A72FED2A507262005ED681 /* PostDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataManagerTests.swift; sourceTree = "<group>"; };
+		86A72FEF2A5076F2005ED681 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		86A72FF12A5077F9005ED681 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		86A72FF42A507A58005ED681 /* SingleCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCommentView.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BF2A4D7B6E00B09323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,6 +223,9 @@
 		86A72F8B2A4D84CC005ED681 /* CommentsView */ = {
 			isa = PBXGroup;
 			children = (
+				86A72FEF2A5076F2005ED681 /* CommentsView.swift */,
+				86A72FF12A5077F9005ED681 /* CommentsViewModel.swift */,
+				86A72FF42A507A58005ED681 /* SingleCommentView.swift */,
 			);
 			path = CommentsView;
 			sourceTree = "<group>";
@@ -637,10 +646,13 @@
 				86A72FC62A4EDEA8005ED681 /* UserSession.swift in Sources */,
 				86A72FC02A4DDD02005ED681 /* MainTabView.swift in Sources */,
 				86A72F742A4D80BC005ED681 /* Request.swift in Sources */,
+				86A72FF22A5077F9005ED681 /* CommentsViewModel.swift in Sources */,
+				86A72FF52A507A58005ED681 /* SingleCommentView.swift in Sources */,
 				86A72F902A4D8685005ED681 /* ServiceLocator.swift in Sources */,
 				86A72FAA2A4DBF98005ED681 /* LoadingView.swift in Sources */,
 				86A72F932A4D91FE005ED681 /* PostsNetworkService.swift in Sources */,
 				86A72FAC2A4DBFD6005ED681 /* ErrorView.swift in Sources */,
+				86A72FF02A5076F2005ED681 /* CommentsView.swift in Sources */,
 				86A72F792A4D81E8005ED681 /* Constants.swift in Sources */,
 				86A72F762A4D8152005ED681 /* NetworkService.swift in Sources */,
 				86A72FC42A4EDD47005ED681 /* EntryView.swift in Sources */,

@@ -48,13 +48,29 @@ struct PostsView: View {
     }
     
     private func postsList() -> some View {
+        
         List {
             ForEach(Array(self.viewModel.posts.enumerated()), id: \.1.id) { index, post in
-                SinglePostView(post: post) { updatedPost in
-                    self.viewModel.toggleFavorite(at: index, with: updatedPost)
+                Section {
+                    SinglePostView(post: post) { updatedPost in
+                        self.viewModel.toggleFavorite(at: index, with: updatedPost)
+                    }
+
+                    NavigationLink(
+                        destination: CommentsView(
+                            post: post,
+                            viewModel: CommentsViewModel(),
+                            toggleFavorite: { updatedPost in
+                                self.viewModel.toggleFavorite(at: index, with: updatedPost)
+                            }
+                        )
+                    ) {
+                        Text(LocalizableManager.comments)
+                    }
                 }
             }
         }
+        .listStyle(.insetGrouped)
         .navigationTitle(self.viewModel.title)
     }
 }

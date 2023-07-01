@@ -14,36 +14,34 @@ struct SinglePostView: View {
     
     var body: some View {
         
-        HStack {
+        
+        VStack(alignment: .leading) {
             
-            VStack(alignment: .leading) {
+            HStack {
+                
                 Text("UserID: \(post.userId), ID: \(post.id)")
                     .font(FontManager.lightSecondaryFont)
                     .padding(.top, Constants.UIConstants.defaultPadding)
                 
-                Text(post.title)
-                    .font(FontManager.mainTitleFont)
-                    .padding([.bottom, .top], Constants.UIConstants.defaultPadding)
-                
-                Text(LocalizableManager.spacer + post.body)
-                    .font(FontManager.mainBodyFont)
-                    .foregroundColor(Color.gray)
-                
                 Spacer()
-            }
-            
-            Spacer()
-            
-            VStack {
+                
                 FavButton(isFavorite: self.post.isFavorite) {
                     self.toggleFavorite(self.post)
                 }
                 .padding([.leading, .top])
-                
-                Spacer()
             }
+
+            Text(post.title)
+                .font(FontManager.mainTitleFont)
+                .padding([.bottom, .top], Constants.UIConstants.defaultPadding)
+            
+            Text(LocalizableManager.spacer + post.body)
+                .font(FontManager.mainBodyFont)
+                .foregroundColor(Color.gray)
         }
         .padding(Constants.UIConstants.smallerPadding)
     }
+    
 }
+
 
