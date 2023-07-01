@@ -42,24 +42,28 @@ final class PostsViewModel: ObservableObject {
     
     func toggleFavorite(at index: Int, with post: Post) {
         if post.isFavorite {
-            postDataManager.deletePost(post) { [weak self] success in
-                if success {
-                    DispatchQueue.main.async {
-                        if self?.fetchFavoritesOnly == true {
-                            self?.posts.remove(at: index)
-                        } else {
-                            self?.posts[index].isFavorite = false
-                        }
+            switch self.postDataManager.deletePost(post) {
+                
+            case .success():
+                DispatchQueue.main.async {
+                    if self.fetchFavoritesOnly == true {
+                        self.posts.remove(at: index)
+                    } else {
+                        self.posts[index].isFavorite = false
                     }
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         } else {
-            postDataManager.savePost(post) { [weak self] success in
-                if success {
-                    DispatchQueue.main.async {
-                        self?.posts[index].isFavorite = true
-                    }
+            
+            switch self.postDataManager.savePost(post) {
+            case .success():
+                DispatchQueue.main.async {
+                    self.posts[index].isFavorite = true
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
@@ -68,24 +72,38 @@ final class PostsViewModel: ObservableObject {
         
         guard case .loading = self.state else { return }
         
-        if fetchFavoritesOnly {
-            DispatchQueue.main.async {
-                self.posts = self.postDataManager.fetchFavoritePosts()
-                self.state = .loaded
+        if self.fetchFavoritesOnly {
+            
+            switch self.postDataManager.fetchFavoritePosts() {
+            case .success(let posts):
+                DispatchQueue.main.async {
+                    self.posts = posts
+                    self.state = .loaded
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         } else {
             self.networkService.fetchPosts(userId: self.userID) { [weak self] result in
-                
                 DispatchQueue.main.async {
-                    
                     switch result {
                     case .success(let posts):
-                        self?.posts = posts.map {
-                            Post(userId: $0.userId,
-                                 id: $0.id,
-                                 title: $0.title,
-                                 body: $0.body,
-                                 isFavorite: (self?.postDataManager.isPostFavorited(id: $0.id, userID: $0.userId))!) }
+                        self?.posts = posts.map { post in
+                            var isFavorite = false
+                            switch self?.postDataManager.isPostFavorited(id: post.id, userID: post.userId) {
+                            case .success(let favorited):
+                                isFavorite = favorited
+                            case .failure(let error):
+                                print("Failed to check if post is favorited: \(error)")
+                            case .none:
+                                print("Failed to check if post is favorited: optional self is nil")
+                            }
+                            return Post(userId: post.userId,
+                                        id: post.id,
+                                        title: post.title,
+                                        body: post.body,
+                                        isFavorite: isFavorite)
+                        }
                         self?.state = .loaded
                     case .failure(let error):
                         self?.state = .error(error)

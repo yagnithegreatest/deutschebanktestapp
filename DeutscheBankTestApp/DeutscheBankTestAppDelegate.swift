@@ -35,10 +35,10 @@ struct DeutscheBankTestAppDelegate: App {
         let commentsNetworkService = CommentsNetworkService(networkService: networkService)
         ServiceLocator.shared.addService(commentsNetworkService as CommentsNetworkServiceProtocol)
         
-        let postDataManager = PostDataManager()
-        ServiceLocator.shared.addService(postDataManager as PostDataManagerProtocol)
-        
         let coreDataManager = CoreDataManager()
         ServiceLocator.shared.addService(coreDataManager as CoreDataManagerProtocol)
+        
+        let postDataManager = PostDataManager()
+        ServiceLocator.shared.addService(postDataManager as PostDataManagerProtocol)
     }
 }

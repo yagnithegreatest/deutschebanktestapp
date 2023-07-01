@@ -8,10 +8,19 @@
 import CoreData
 import Foundation
 
-final class CoreDataManager<Entity: NSManagedObject>: ObservableObject {
+protocol CoreDataManagerProtocol {
+    
+    var container: NSPersistentContainer { get }
+    
+    func save<T: NSManagedObject>(object: T, completion: @escaping (Result<Void, Error>) -> Void)
+    func fetch<T: NSManagedObject>(type: T.Type, predicate: NSPredicate?) -> Result<[T], Error>
+    func delete<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, completion: @escaping (Result<Void, Error>) -> Void)
+}
+
+final class CoreDataManager: CoreDataManagerProtocol {
     
     let container: NSPersistentContainer
-
+    
     init() {
         
         self.container = NSPersistentContainer(name: "DeutscheBankTestApp")
@@ -21,46 +30,43 @@ final class CoreDataManager<Entity: NSManagedObject>: ObservableObject {
             }
         }
     }
-
-    func saveEntity(entity: Entity, completion: @escaping (Bool) -> Void) {
-        
+    
+    func save<T: NSManagedObject>(object: T, completion: @escaping (Result<Void, Error>) -> Void) {
         do {
             try self.container.viewContext.save()
-            completion(true)
+            completion(.success(()))
         } catch let error {
             print("Core Data save failed: \(error)")
-            completion(false)
+            completion(.failure(error))
         }
     }
-
-    func fetchEntities(completion: @escaping ([Entity]) -> Void){
-        
-        let fetchRequest = NSFetchRequest<Entity>(entityName: String(describing: Entity.self))
-        do {
-            let entities = try self.container.viewContext.fetch(fetchRequest)
-            completion(entities)
-        } catch let error {
-            print("Core Data fetch failed: \(error)")
-            completion([])
-        }
-    }
-
-    func deleteEntity(matching predicate: NSPredicate, completion: @escaping (Bool) -> Void) {
-        
-        let fetchRequest = NSFetchRequest<Entity>(entityName: String(describing: Entity.self))
+    
+    func fetch<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil) -> Result<[T], Error> {
+        let fetchRequest = NSFetchRequest<T>(entityName: String(describing: T.self))
         fetchRequest.predicate = predicate
         
         do {
             let entities = try self.container.viewContext.fetch(fetchRequest)
-            for entity in entities {
-                self.container.viewContext.delete(entity)
-            }
+            return .success(entities)
+        } catch let error {
+            print("Core Data fetch failed: \(error)")
+            return .failure(error)
+        }
+    }
+    
+    func delete<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, completion: @escaping (Result<Void, Error>) -> Void) {
+        let fetchRequest = NSFetchRequest<T>(entityName: String(describing: T.self))
+        fetchRequest.predicate = predicate
+        
+        do {
+            let entities = try self.container.viewContext.fetch(fetchRequest)
+            entities.forEach { self.container.viewContext.delete($0) }
             
             try self.container.viewContext.save()
-            completion(true)
+            completion(.success(()))
         } catch let error {
             print("Core Data delete failed: \(error)")
-            completion(false)
+            completion(.failure(error))
         }
     }
 }

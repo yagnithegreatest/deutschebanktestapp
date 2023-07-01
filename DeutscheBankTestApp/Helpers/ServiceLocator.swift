@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ServiceLocator {
+final class ServiceLocator {
     
     private var services: [String: Any] = [:]
     
