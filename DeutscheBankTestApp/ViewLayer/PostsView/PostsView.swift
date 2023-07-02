@@ -10,8 +10,11 @@ import SwiftUI
 struct PostsView: View {
     
     @EnvironmentObject var userSession: UserSession
+    
+    // MARK: - Init
     @ObservedObject var viewModel: PostsViewModel
     
+    // MARK: - Body
     var body: some View {
         Group {
             switch self.viewModel.state {
@@ -36,6 +39,7 @@ struct PostsView: View {
         .navigationBarItems(trailing: self.logoutButton)
     }
     
+    // MARK: - Private methods
     private var logoutButton: some View {
         
         Button(action: {
@@ -43,7 +47,7 @@ struct PostsView: View {
         }) {
             Text(LocalizableManager.logout)
             Image(systemName: ImageManager.houseFill)
-                .foregroundColor(.blue)
+                .foregroundColor(ColorHelper.brandColor)
         }
     }
     

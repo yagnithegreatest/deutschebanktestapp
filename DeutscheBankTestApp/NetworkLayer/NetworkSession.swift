@@ -20,8 +20,9 @@ protocol NetworkSessionProtocol {
     )
 }
 
-class NetworkSession: NetworkSessionProtocol {
+final class NetworkSession: NetworkSessionProtocol {
     
+    // MARK: - API
     func request(
          _ url: URLConvertible,
          method: HTTPMethod = .get,

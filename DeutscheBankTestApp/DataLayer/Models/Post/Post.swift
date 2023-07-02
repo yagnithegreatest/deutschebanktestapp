@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Post: Identifiable, ObservableObject, Equatable, Hashable {
+final class Post: Identifiable, ObservableObject, Equatable {
     
     init(
         userId: Int,
@@ -31,9 +31,5 @@ class Post: Identifiable, ObservableObject, Equatable, Hashable {
     
     static func == (lhs: Post, rhs: Post) -> Bool {
         return lhs.userId == rhs.userId && lhs.id == rhs.id
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
     }
 }

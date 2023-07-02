@@ -14,12 +14,15 @@ protocol ReachabilityManagerProtocol {
 
 final class ReachabilityManager: ReachabilityManagerProtocol {
     
+    // MARK: - Private properties
     private let reachabilityManager = NetworkReachabilityManager()
     
+    // MARK: - Public properties
     var isReachable: Bool {
         return self.reachabilityManager?.isReachable ?? false
     }
 
+    // MARK: - API
     func startNetworkReachabilityObserver() {
         
         self.reachabilityManager?.startListening(onUpdatePerforming: { status in

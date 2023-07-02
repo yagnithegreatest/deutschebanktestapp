@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CommentsView: View {
     
+    // MARK: - Init
     @ObservedObject var post: Post
     @ObservedObject var viewModel: CommentsViewModel
-    
     let toggleFavorite: (Post) -> Void
     
+    // MARK: - Body
     var body: some View {
         
         VStack {
@@ -22,18 +23,23 @@ struct CommentsView: View {
                 .padding()
             
             Group {
+                
                 switch self.viewModel.state {
+                    
                 case .loading:
                     LoadingView()
                 case .loaded:
+                    
                     if self.viewModel.comments.isEmpty {
                         EmptyStateView(title: LocalizableManager.noComments)
                     } else {
+                        
                         List(self.viewModel.comments, id: \.id) { comment in
                             SingleCommentView(comment: comment)
                         }
                     }
                 case .error(let error):
+                    
                     Spacer()
                     ErrorView(error: error)
                     Spacer()

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct FavButton: View {
     
+    // MARK: - Init
     var isFavorite: Bool
     var onTap: () -> Void
     
+    // MARK: - Body
     var body: some View {
         
         Button(action: self.onTap) {
@@ -19,7 +21,7 @@ struct FavButton: View {
             Image(systemName: self.isFavorite ? ImageManager.starFilled : ImageManager.starEmpty)
                 .resizable()
                 .frame(width: 20, height: 20)
-                .foregroundColor(self.isFavorite ? .yellow : .gray)
+                .foregroundColor(self.isFavorite ? ColorHelper.favoriteColor : ColorHelper.disabledStateColor)
         }
     }
 }

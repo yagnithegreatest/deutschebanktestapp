@@ -54,6 +54,8 @@
 		86A72FF72A518AD2005ED681 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF62A518AD2005ED681 /* ReachabilityManager.swift */; };
 		86A72FF92A518EAC005ED681 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF82A518EAC005ED681 /* NetworkError.swift */; };
 		86A72FFB2A5194A5005ED681 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FFA2A5194A5005ED681 /* ViewModelState.swift */; };
+		86A72FFD2A51A7C1005ED681 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FFC2A51A7C0005ED681 /* ColorHelper.swift */; };
+		86A72FFF2A51AC10005ED681 /* NonLocalizableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FFE2A51AC10005ED681 /* NonLocalizableManager.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
 		86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */; };
@@ -123,6 +125,8 @@
 		86A72FF62A518AD2005ED681 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		86A72FF82A518EAC005ED681 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		86A72FFA2A5194A5005ED681 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		86A72FFC2A51A7C0005ED681 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		86A72FFE2A51AC10005ED681 /* NonLocalizableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonLocalizableManager.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BF2A4D7B6E00B09323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				86A72FB12A4DC772005ED681 /* Managers */,
 				86A72F782A4D81E8005ED681 /* Constants.swift */,
 				86A72F8F2A4D8685005ED681 /* ServiceLocator.swift */,
+				86A72FFC2A51A7C0005ED681 /* ColorHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				86A72FB22A4DC792005ED681 /* LocalizableManager.swift */,
 				86A72FB82A4DD3DB005ED681 /* FontManager.swift */,
 				86A72FBC2A4DD6BB005ED681 /* ImageManager.swift */,
+				86A72FFE2A51AC10005ED681 /* NonLocalizableManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -677,11 +683,13 @@
 				86A72F862A4D840C005ED681 /* PostAPIModel.swift in Sources */,
 				86A72F962A4D93C3005ED681 /* PostNetworkService+Requests.swift in Sources */,
 				86A72FC22A4DE7A6005ED681 /* EmptyStateView.swift in Sources */,
+				86A72FFF2A51AC10005ED681 /* NonLocalizableManager.swift in Sources */,
 				86A72FB92A4DD3DB005ED681 /* FontManager.swift in Sources */,
 				86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */,
 				86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */,
 				86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */,
 				86A72FF92A518EAC005ED681 /* NetworkError.swift in Sources */,
+				86A72FFD2A51A7C1005ED681 /* ColorHelper.swift in Sources */,
 				86A72FD92A4F1C84005ED681 /* PostDataManager.swift in Sources */,
 				86A72FBD2A4DD6BB005ED681 /* ImageManager.swift in Sources */,
 				86A72FB02A4DC4E6005ED681 /* LoginView.swift in Sources */,

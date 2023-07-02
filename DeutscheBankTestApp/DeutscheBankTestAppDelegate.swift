@@ -12,6 +12,7 @@ struct DeutscheBankTestAppDelegate: App {
     
     @StateObject private var userSession = UserSession()
     
+    // MARK: - Init
     init() {
         
         self.addDependencies()
@@ -20,6 +21,7 @@ struct DeutscheBankTestAppDelegate: App {
         reachabilityManager.startNetworkReachabilityObserver()
     }
 
+    // MARK: - Initial view
     var body: some Scene {
         
         WindowGroup {
@@ -28,6 +30,7 @@ struct DeutscheBankTestAppDelegate: App {
         }
     }
 
+    // MARK: - Private methods
     private func addDependencies() {
         
         let reachabilityManager = ReachabilityManager()

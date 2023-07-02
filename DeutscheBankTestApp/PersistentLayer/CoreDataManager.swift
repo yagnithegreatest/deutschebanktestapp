@@ -19,8 +19,10 @@ protocol CoreDataManagerProtocol {
 
 final class CoreDataManager: CoreDataManagerProtocol {
     
+    // MARK: - Public properties
     let container: NSPersistentContainer
     
+    // MARK: - Init
     init() {
         
         self.container = NSPersistentContainer(name: "DeutscheBankTestApp")
@@ -31,6 +33,7 @@ final class CoreDataManager: CoreDataManagerProtocol {
         }
     }
     
+    // MARK: - API
     func save<T: NSManagedObject>(object: T, completion: @escaping (Result<Void, Error>) -> Void) {
         do {
             try self.container.viewContext.save()

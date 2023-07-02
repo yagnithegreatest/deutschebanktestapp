@@ -10,11 +10,17 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject var userSession: UserSession
+    
+    // MARK: - Private properties
     @State private var inputUserID: String = ""
     
+    // MARK: - Body
     var body: some View {
+        
         NavigationView {
+            
             VStack {
+                
                 TextField(LocalizableManager.enterUserID, text: $inputUserID)
                     .keyboardType(.numberPad)
                     .padding()
@@ -25,8 +31,8 @@ struct LoginView: View {
                     self.userSession.isLoggedIn = true
                 }
                 .padding()
-                .background(Color.blue)
-                .foregroundColor(Color.white)
+                .background(ColorHelper.brandColor)
+                .foregroundColor(ColorHelper.accentFontColor)
                 .cornerRadius(Constants.UIConstants.baseCornerRadius)
                 .opacity(self.inputUserID.isEmpty ? 0.5 : 1.0)
                 .disabled(self.inputUserID.isEmpty)

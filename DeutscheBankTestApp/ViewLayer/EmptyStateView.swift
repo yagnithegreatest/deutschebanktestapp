@@ -9,8 +9,10 @@ import SwiftUI
 
 struct EmptyStateView: View {
     
+    // MARK: - Init
     let title: String
     
+    // MARK: - Body
     var body: some View {
         Text(self.title)
             .multilineTextAlignment(.center)

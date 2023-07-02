@@ -9,8 +9,10 @@ import SwiftUI
 
 struct SingleCommentView: View {
     
+    // MARK: - Init
     let comment: Comment
     
+    // MARK: - Body
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -25,8 +27,7 @@ struct SingleCommentView: View {
             
             Text(comment.body)
                 .font(FontManager.mainBodyFont)
-                .foregroundColor(Color.gray)
+                .foregroundColor(ColorHelper.secondaryFontColor)
         }
-        
     }
 }

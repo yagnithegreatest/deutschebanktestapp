@@ -11,21 +11,24 @@ protocol PostDataManagerProtocol {
     
     func isPostFavorited(id: Int, userID: Int) -> Result<Bool, Error>
     
-    func savePost(_ post: Post) -> Result<Void, Error>
+    func savePost(_ post: Post, completion: @escaping (Result<Void, Error>) -> Void)
     
     func fetchFavoritePosts() -> Result<[Post], Error>
     
-    func deletePost(_ post: Post) -> Result<Void, Error>
+    func deletePost(_ post: Post, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 final class PostDataManager: PostDataManagerProtocol {
     
+    // MARK: - Private properties
     private let coreDataManager: CoreDataManagerProtocol
 
+    // MARK: - Init
     init(manager: CoreDataManagerProtocol = ServiceLocator.shared.getService()) {
         self.coreDataManager = manager
     }
 
+    // MARK: - API
     func isPostFavorited(id: Int, userID: Int) -> Result<Bool, Error> {
         
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [
@@ -37,7 +40,7 @@ final class PostDataManager: PostDataManagerProtocol {
                                           predicate: predicate).map { !$0.isEmpty }
     }
 
-    func savePost(_ post: Post) -> Result<Void, Error> {
+    func savePost(_ post: Post, completion: @escaping (Result<Void, Error>) -> Void) {
         
         let postEntity = PostEntity(context: coreDataManager.container.viewContext)
         postEntity.postId = Int32(post.id)
@@ -45,16 +48,7 @@ final class PostDataManager: PostDataManagerProtocol {
         postEntity.title = post.title
         postEntity.body = post.body
         
-        let semaphore = DispatchSemaphore(value: 0)
-        var result: Result<Void, Error>?
-        
-        self.coreDataManager.save(object: postEntity) { saveResult in
-            result = saveResult
-            semaphore.signal()
-        }
-        
-        semaphore.wait()
-        return result ?? .failure(NSError(domain: "", code: -1, userInfo: nil))
+        self.coreDataManager.save(object: postEntity, completion: completion)
     }
 
     func fetchFavoritePosts() -> Result<[Post], Error> {
@@ -64,19 +58,10 @@ final class PostDataManager: PostDataManagerProtocol {
         }
     }
     
-    func deletePost(_ post: Post) -> Result<Void, Error> {
+    func deletePost(_ post: Post, completion: @escaping (Result<Void, Error>) -> Void) {
         
         let predicate = NSPredicate(format: "postId == %d AND userId == %d", post.id, post.userId)
 
-        let semaphore = DispatchSemaphore(value: 0)
-        var result: Result<Void, Error>?
-        
-        self.coreDataManager.delete(type: PostEntity.self, predicate: predicate) { deleteResult in
-            result = deleteResult
-            semaphore.signal()
-        }
-        
-        semaphore.wait()
-        return result ?? .failure(NSError(domain: "", code: -1, userInfo: nil))
+        self.coreDataManager.delete(type: PostEntity.self, predicate: predicate, completion: completion)
     }
 }

@@ -9,17 +9,21 @@ import SwiftUI
 
 struct SinglePostView: View {
     
+    // MARK: - Init
     @ObservedObject var post: Post
     let toggleFavorite: (Post) -> Void
     
+    // MARK: - Body
     var body: some View {
-        
+
+        let userIDString = NonLocalizableManager.userID + String(self.post.userId)
+        let postIDString = NonLocalizableManager.postId + String(self.post.id)
         
         VStack(alignment: .leading) {
             
             HStack {
                 
-                Text("UserID: \(post.userId), ID: \(post.id)")
+                Text(userIDString + "," + postIDString)
                     .font(FontManager.lightSecondaryFont)
                     .padding(.top, Constants.UIConstants.defaultPadding)
                 
@@ -37,11 +41,8 @@ struct SinglePostView: View {
             
             Text(post.body)
                 .font(FontManager.mainBodyFont)
-                .foregroundColor(Color.gray)
+                .foregroundColor(ColorHelper.secondaryFontColor)
         }
         .padding(Constants.UIConstants.smallerPadding)
     }
-    
 }
-
-

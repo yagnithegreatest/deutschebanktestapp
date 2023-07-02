@@ -12,8 +12,9 @@ protocol NetworkServiceProtocol {
     func request<T: Codable>(_ request: Request, completion: @escaping (Result<T, Error>) -> Void)
 }
 
-class NetworkService: NetworkServiceProtocol {
+final class NetworkService: NetworkServiceProtocol {
     
+    // MARK: - Private properties
     private let networkSession: NetworkSessionProtocol
     private let reachabilityManager: ReachabilityManagerProtocol
     
@@ -21,11 +22,13 @@ class NetworkService: NetworkServiceProtocol {
         return self.reachabilityManager.isReachable
     }
     
+    // MARK: - Init
     init(networkSession: NetworkSessionProtocol = ServiceLocator.shared.getService(), reachabilityManager: ReachabilityManagerProtocol = ServiceLocator.shared.getService()) {
         self.networkSession = networkSession
         self.reachabilityManager = reachabilityManager
     }
     
+    // MARK: - API
     func request<T: Codable>(
         _ request: Request,
         completion: @escaping (Result<T, Error>) -> Void

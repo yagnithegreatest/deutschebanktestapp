@@ -10,7 +10,7 @@ import CoreData
 import Foundation
 import XCTest
 
-class PostDataManagerTests: XCTestCase {
+final class PostDataManagerTests: XCTestCase {
     
     var mockCoreDataManager: MockCoreDataManager!
     var postDataManager: PostDataManager!
@@ -31,11 +31,21 @@ class PostDataManagerTests: XCTestCase {
     func testSavePost() {
         
         let post = Post(userId: 1, id: 1, title: "Test Title", body: "Test Body", isFavorite: true)
-        let result = self.postDataManager.savePost(post)
-        
-        XCTAssertTrue(self.mockCoreDataManager.isSaveCalled)
-        XCTAssertNotNil(result)
-        XCTAssertNoThrow(try result.get())
+        let expectation = self.expectation(description: "Saving post")
+
+        self.postDataManager.savePost(post) { result in
+            XCTAssertTrue(self.mockCoreDataManager.isSaveCalled)
+            XCTAssertNoThrow {
+                do {
+                    let _ = try result.get()
+                } catch {
+                    XCTFail("Expected function to not throw, but it did throw: \(error)")
+                }
+            }
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     func testFetchFavoritePosts() {
@@ -49,10 +59,22 @@ class PostDataManagerTests: XCTestCase {
     func testDeletePost() {
         
         let post = Post(userId: 1, id: 1, title: "Test Title", body: "Test Body", isFavorite: true)
-        let result = self.postDataManager.deletePost(post)
-        
-        XCTAssertTrue(self.mockCoreDataManager.isDeleteCalled)
-        XCTAssertNotNil(result)
-        XCTAssertNoThrow(try result.get())
+        let expectation = self.expectation(description: "Deleting post")
+
+        self.postDataManager.deletePost(post) { result in
+            
+            XCTAssertTrue(self.mockCoreDataManager.isDeleteCalled)
+            
+            XCTAssertNoThrow {
+                do {
+                    let _ = try result.get()
+                } catch {
+                    XCTFail("Expected function to not throw, but it did throw: \(error)")
+                }
+            }
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }

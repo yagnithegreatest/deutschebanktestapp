@@ -10,7 +10,8 @@ import SwiftUI
 struct EntryView: View {
     
     @EnvironmentObject var userSession: UserSession
-
+    
+    // MARK: - Body
     var body: some View {
         if self.userSession.isLoggedIn {
             MainTabView().environmentObject(self.userSession)

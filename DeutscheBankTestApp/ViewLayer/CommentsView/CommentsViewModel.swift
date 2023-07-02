@@ -9,15 +9,19 @@ import Foundation
 
 final class CommentsViewModel: ObservableObject {
 
+    // MARK: - Public properties
     @Published var comments: [Comment] = []
     @Published var state: ViewModelState = .loading
 
+    // MARK: - Private properties
     private var commentsNetworkService: CommentsNetworkServiceProtocol
 
+    // MARK: - Init
     init(commentsNetworkService: CommentsNetworkServiceProtocol = ServiceLocator.shared.getService()) {
         self.commentsNetworkService = commentsNetworkService
     }
 
+    // MARK: - API
     func fetchComments(for postId: Int) {
         self.state = .loading
         self.commentsNetworkService.fetchComments(postId: postId) { [weak self] result in

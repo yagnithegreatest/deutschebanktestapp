@@ -10,8 +10,11 @@ import SwiftUI
 struct MainTabView: View {
     
     @EnvironmentObject var userSession: UserSession
+    
+    // MARK: - Private properties
     @State private var selectedTab = 0
     
+    // MARK: - Body
     var body: some View {
         
         TabView(selection: $selectedTab) {
@@ -33,7 +36,6 @@ struct MainTabView: View {
                 Text(LocalizableManager.favorite)
             }
             .tag(1)
-            
         }
     }
 }

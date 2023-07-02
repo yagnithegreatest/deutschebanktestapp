@@ -49,9 +49,9 @@ final class PostsViewModelTests: XCTestCase {
     }
     
     func testToggleFavorite() {
-
+        
         let mockViewModel = MockPostsViewModel(networkService: mockNetworkService, postDataManager: mockDataManager)
-
+        
         let postAPIModel = PostAPIModel(userId: 1, id: 1, title: "Title1", body: "Body1")
         var isFav: Bool
         
@@ -67,10 +67,21 @@ final class PostsViewModelTests: XCTestCase {
         mockNetworkService.postAPIModels = [postAPIModel]
         
         mockViewModel.posts = [post]
-
+        
+        let expectation = self.expectation(description: "Toggling favorite status")
+        
         mockViewModel.toggleFavorite(at: 0, with: post)
-
-        XCTAssertTrue(mockViewModel.toggleFavoriteCalled)
-        XCTAssertTrue(mockViewModel.posts[0].isFavorite)
+        DispatchQueue.main.async {
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5) { error in
+            if let error = error {
+                XCTFail("waitForExpectations errored: \(error)")
+            }
+            
+            XCTAssertTrue(mockViewModel.toggleFavoriteCalled)
+            XCTAssertTrue(mockViewModel.posts[0].isFavorite)
+        }
     }
 }

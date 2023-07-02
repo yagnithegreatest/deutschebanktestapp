@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ErrorView: View {
     
+    // MARK: - Init
     let error: Error
     
+    // MARK: - Private properties
     private var errorMessage: String {
         
         if let networkError = self.error as? NetworkError {
@@ -20,6 +22,7 @@ struct ErrorView: View {
         }
     }
     
+    // MARK: - Body
     var body: some View {
         
         VStack {

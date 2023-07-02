@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class UserSession: ObservableObject {
+final class UserSession: ObservableObject {
     @Published var userID: Int? = nil
     @Published var isLoggedIn: Bool = false
-}   
+}

@@ -19,7 +19,7 @@ final class MockPostDataManager: PostDataManagerProtocol {
         return .success(favorited)
     }
 
-    func savePost(_ post: Post) -> Result<Void, Error> {
+    func savePost(_ post: Post, completion: @escaping (Result<Void, Error>) -> Void) {
         
         if let index = self.savedPosts.firstIndex(where: { $0.id == post.id && $0.userId == post.userId }) {
             self.savedPosts[index] = post
@@ -27,7 +27,7 @@ final class MockPostDataManager: PostDataManagerProtocol {
             self.savedPosts.append(post)
         }
         
-        return .success(())
+        completion(.success(()))
     }
 
     func fetchFavoritePosts() -> Result<[Post], Error> {
@@ -35,12 +35,12 @@ final class MockPostDataManager: PostDataManagerProtocol {
         return .success(self.savedPosts)
     }
 
-    func deletePost(_ post: Post) -> Result<Void, Error> {
+    func deletePost(_ post: Post, completion: @escaping (Result<Void, Error>) -> Void) {
         
         if let index = savedPosts.firstIndex(where: { $0.id == post.id && $0.userId == post.userId }) {
             self.savedPosts[index].isFavorite = false
         }
         
-        return .success(())
+        completion(.success(()))
     }
 }
