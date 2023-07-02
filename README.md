@@ -1,47 +1,45 @@
-{\rtf1\ansi\ansicpg1251\cocoartf2639
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;}
-{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red20\green152\blue106;
-\red235\green16\blue47;\red20\green152\blue106;\red235\green16\blue47;}
-{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;\cssrgb\c0\c65098\c49020;
-\cssrgb\c94902\c17255\c23922;\cssrgb\c0\c65098\c49020;\cssrgb\c94902\c17255\c23922;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+# DeutscheBankTestApp
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 # DeutscheBankTestApp\
-\
-DeutscheBankTestApp is an iOS app that allows users to log in with their UserID and fetch their posts from [\cf4 \strokec4 JSONPlaceholder API\cf2 \strokec2 ](\cf5 \strokec5 https://jsonplaceholder.typicode.com\cf2 \strokec2 ). Users can mark any post as a favorite, and these favorites are stored locally for later viewing. Users can easily switch between viewing all posts or only their favorite ones.\
-\
-## Tech Stack\
-The app is developed using Swift and utilizes the following technologies and libraries:\
-\
-\pard\pardeftab720\partightenfactor0
-\cf5 \strokec5 -\cf2 \strokec2  **SwiftUI** for building the user interface.\
-\cf5 \strokec5 -\cf2 \strokec2  **Alamofire** for networking tasks, fetching posts from the JSONPlaceholder API.\
-\cf5 \strokec5 -\cf2 \strokec2  **CoreData** for local persistence of favorite posts.\
-\cf5 \strokec5 -\cf2 \strokec2  **XCTest** framework for unit tests.\
-\cf5 \strokec5 -\cf2 \strokec2  **Git** for version control.\
-\
-## Screenshots\
-\
-\pard\pardeftab720\partightenfactor0
-\cf2 ![\cf4 \strokec4 Login\cf2 \strokec2 ](\cf5 \strokec5 ./screenshots/login.png\cf2 \strokec2 )\
-![\cf4 \strokec4 My posts\cf2 \strokec2 ](\cf5 \strokec5 ./screenshots/myposts.png\cf2 \strokec2 )\
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \outl0\strokewidth0 ![\cf6 Comments\cf2 ](\cf7 ./screenshots/comments.png\cf2 )\
-\pard\pardeftab720\partightenfactor0
-\cf2 ![\cf6 Empty/error states\cf2 ](\cf7 ./screenshots/empty\cf2 )\cf2 \cb3 \outl0\strokewidth0 \strokec2 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-## Setup\
-Follow these steps to get the app running on your local machine:\
-\
-\pard\pardeftab720\partightenfactor0
-\cf5 \strokec5 1.\cf2 \strokec2  Clone this repository: `git clone https://github.com/yagnithegreatest/deutschebanktestapp.git`\
-\cf5 \strokec5 2.\cf2 \strokec2  Navigate to the project directory: `cd DeutscheBankTestApp`\
-\cf5 \strokec5 3.\cf2 \strokec2  Open the project in Xcode: `open DeutscheBankTestApp.xcodeproj`\
-\cf5 \strokec5 4.\cf2 \strokec2  Build and run the project in the iOS Simulator or on a physical device.\
-\
-## Testing\
-To run the unit tests, press `Command + U` in Xcode.}
+DeutscheBankTestApp is an iOS app that allows users to log in with their UserID and fetch their posts from [JSONPlaceholder API](https://jsonplaceholder.typicode.com). Users can mark any post as a favorite, and these favorites are stored locally for later viewing. Users can easily switch between viewing all posts or only their favorite ones.
+
+## Tech Stack
+The app is developed using Swift and utilizes the following technologies and libraries:
+
+- **SwiftUI** for building the user interface.
+- **MVVM** as an architecture/
+- **Alamofire** for networking tasks, fetching posts from the JSONPlaceholder API.
+- **CoreData** for local persistence of favorite posts.
+- **XCTest** framework for unit tests.
+- **Git** for version control.
+
+## Screenshots
+- **Login screen** 
+![Login](DeutscheBankTestApp/screenshots/login.png)
+- **My posts screen** 
+![My posts](DeutscheBankTestApp/screenshots/myposts.png)
+- **Comments screen** 
+![Comments](DeutscheBankTestApp/screenshots/comments.png)
+- **Error/empty state screens** 
+![Error/empty states](DeutscheBankTestApp/screenshots/empty.png)
+
+## Features
+Even if it's just the foundation of the brand new app needed to be scalable and maintainable as a standalone product, it still has a goal to provide seamless user experience. It's achieved by implementing new features not listed in requirements:
+
+- **Basic error handling**  Our screens are designed to handle unexpected errors gracefully. The app doesn't freeze or become unresponsive due to these errors. Instead, users are promptly informed and given the next steps.
+
+- **Loading screens**  These screens provide immediate visual feedback when content is loading or operations are being processed. This ensures a smooth user experience, even during periods of heavy processing or slow network speed.
+
+- **UserID management**  Mistakenly entered an incorrect UserID? No worries! With our app, users can simply logout and try again without any hassle.
+
+- **Offline usability**  Internet connection lost? Don't worry, you won't get stuck on an infinite loading page. Our app informs users about connectivity issues and allows them to continue viewing their favorite posts locally - no active internet connection needed!
+
+## Setup
+Follow these steps to get the app running on your local machine:
+
+1. Clone this repository: `git clone https://github.com/yourusername/DeutscheBankTestApp.git`
+2. Navigate to the project directory: `cd DeutscheBankTestApp`
+3. Open the project in Xcode: `open DeutscheBankTestApp.xcodeproj`
+4. Build and run the project in the iOS Simulator or on a physical device.
+
+## Testing
+To run the unit tests, press `Command + U` in Xcode.
