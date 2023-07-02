@@ -45,10 +45,6 @@ struct LocalizableManager {
         NSLocalizedString("basic_loading_title", comment: "")
     }
     
-    static var spacer: String {
-        NSLocalizedString("spacer", comment: "")
-    }
-    
     static var noPostsForThisUser: String {
         NSLocalizedString("no_posts_for_this_user", comment: "")
     }
@@ -59,5 +55,13 @@ struct LocalizableManager {
     
     static var noFavoritesYet: String {
         NSLocalizedString("no_favorites_yet", comment: "")
+    }
+    
+    static var noComments: String {
+        NSLocalizedString("no_comments_yet", comment: "")
+    }
+
+    static var noConnection: String {
+        NSLocalizedString("no_connection", comment: "")
     }
 }

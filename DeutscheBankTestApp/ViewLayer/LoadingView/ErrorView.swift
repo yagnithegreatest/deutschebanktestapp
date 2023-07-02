@@ -11,6 +11,15 @@ struct ErrorView: View {
     
     let error: Error
     
+    private var errorMessage: String {
+        
+        if let networkError = self.error as? NetworkError {
+            return networkError.localizedDescription
+        } else {
+            return self.error.localizedDescription
+        }
+    }
+    
     var body: some View {
         
         VStack {
@@ -20,7 +29,7 @@ struct ErrorView: View {
             Text(LocalizableManager.basicErrorTitle)
                 .font(.title)
                 .padding(.top)
-            Text(self.error.localizedDescription)
+            Text(self.errorMessage)
                 .multilineTextAlignment(.center)
                 .padding()
         }

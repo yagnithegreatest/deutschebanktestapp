@@ -23,7 +23,7 @@ struct SingleCommentView: View {
                 .font(FontManager.mainTitleFont)
                 .padding([.bottom], Constants.UIConstants.defaultPadding)
             
-            Text(LocalizableManager.spacer + comment.body)
+            Text(comment.body)
                 .font(FontManager.mainBodyFont)
                 .foregroundColor(Color.gray)
         }

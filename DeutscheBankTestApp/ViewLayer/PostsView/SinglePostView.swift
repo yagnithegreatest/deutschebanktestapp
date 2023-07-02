@@ -35,7 +35,7 @@ struct SinglePostView: View {
                 .font(FontManager.mainTitleFont)
                 .padding([.bottom, .top], Constants.UIConstants.defaultPadding)
             
-            Text(LocalizableManager.spacer + post.body)
+            Text(post.body)
                 .font(FontManager.mainBodyFont)
                 .foregroundColor(Color.gray)
         }

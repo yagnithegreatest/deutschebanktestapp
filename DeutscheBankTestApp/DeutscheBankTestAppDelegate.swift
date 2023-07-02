@@ -13,7 +13,11 @@ struct DeutscheBankTestAppDelegate: App {
     @StateObject private var userSession = UserSession()
     
     init() {
+        
         self.addDependencies()
+        
+        let reachabilityManager: ReachabilityManagerProtocol = ServiceLocator.shared.getService()
+        reachabilityManager.startNetworkReachabilityObserver()
     }
 
     var body: some Scene {
@@ -25,6 +29,12 @@ struct DeutscheBankTestAppDelegate: App {
     }
 
     private func addDependencies() {
+        
+        let reachabilityManager = ReachabilityManager()
+        ServiceLocator.shared.addService(reachabilityManager as ReachabilityManagerProtocol)
+        
+        let networkSession = NetworkSession()
+        ServiceLocator.shared.addService(networkSession as NetworkSessionProtocol)
         
         let networkService = NetworkService()
         ServiceLocator.shared.addService(networkService as NetworkServiceProtocol)

@@ -24,6 +24,7 @@
 /* Error view */
 "basic_error_title" = "Oops! An error occurred...";
 "no_favorites_yet" = "No favorite posts yet. Please mark something as favorite and try again.";
+"no_comments_yet" = "No comments yet for this post. Please try again later";
  
 /* Loading view */
 "basic_loading_title" = "Loading...";
@@ -33,5 +34,5 @@
 
 
 /* Common */
-"spacer" = "    ";
 "logout" = "Logout";
+"no_connection" = "No internet connection.";

@@ -13,5 +13,7 @@ struct EmptyStateView: View {
     
     var body: some View {
         Text(self.title)
+            .multilineTextAlignment(.center)
+            .padding()
     }
 }

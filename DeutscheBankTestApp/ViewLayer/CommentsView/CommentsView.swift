@@ -20,11 +20,23 @@ struct CommentsView: View {
             
             SinglePostView(post: self.post, toggleFavorite: self.toggleFavorite)
                 .padding()
-            if self.viewModel.isLoading {
-                LoadingView()
-            } else {
-                List(self.viewModel.comments, id: \.id) { comment in
-                    SingleCommentView(comment: comment)
+            
+            Group {
+                switch self.viewModel.state {
+                case .loading:
+                    LoadingView()
+                case .loaded:
+                    if self.viewModel.comments.isEmpty {
+                        EmptyStateView(title: LocalizableManager.noComments)
+                    } else {
+                        List(self.viewModel.comments, id: \.id) { comment in
+                            SingleCommentView(comment: comment)
+                        }
+                    }
+                case .error(let error):
+                    Spacer()
+                    ErrorView(error: error)
+                    Spacer()
                 }
             }
         }.onAppear {

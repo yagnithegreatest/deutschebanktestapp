@@ -7,10 +7,10 @@
 
 import Foundation
 
-class CommentsViewModel: ObservableObject {
+final class CommentsViewModel: ObservableObject {
 
     @Published var comments: [Comment] = []
-    @Published var isLoading: Bool = false
+    @Published var state: ViewModelState = .loading
 
     private var commentsNetworkService: CommentsNetworkServiceProtocol
 
@@ -19,17 +19,18 @@ class CommentsViewModel: ObservableObject {
     }
 
     func fetchComments(for postId: Int) {
-        self.isLoading = true
+        self.state = .loading
         self.commentsNetworkService.fetchComments(postId: postId) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let comments):
                     self?.comments = comments
+                    self?.state = .loaded
                 case .failure(let error):
                     print("Failed to fetch comments: \(error)")
                     self?.comments = []
+                    self?.state = .error(error)
                 }
-                self?.isLoading = false
             }
         }
     }

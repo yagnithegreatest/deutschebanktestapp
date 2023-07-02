@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum ViewModelState {
-
-    case loading
-    case loaded
-    case error(Error)
-}
-
 protocol PostsViewModelProtocol {
     
     var posts: [Post] { get }
@@ -35,6 +28,7 @@ final class PostsViewModel: ObservableObject, PostsViewModelProtocol {
     
     let networkService: PostsNetworkServiceProtocol
     let postDataManager: PostDataManagerProtocol
+    
     private let userID: Int
     
     init(
@@ -66,6 +60,7 @@ final class PostsViewModel: ObservableObject, PostsViewModelProtocol {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
+                self.state = .error(error)
             }
         } else {
             
@@ -76,6 +71,7 @@ final class PostsViewModel: ObservableObject, PostsViewModelProtocol {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
+                self.state = .error(error)
             }
         }
     }
@@ -94,6 +90,7 @@ final class PostsViewModel: ObservableObject, PostsViewModelProtocol {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
+                self.state = .error(error)
             }
         } else {
             self.networkService.fetchPosts(userId: self.userID) { [weak self] result in
@@ -107,6 +104,7 @@ final class PostsViewModel: ObservableObject, PostsViewModelProtocol {
                                 isFavorite = favorited
                             case .failure(let error):
                                 print("Failed to check if post is favorited: \(error)")
+                                self?.state = .error(error)
                             case .none:
                                 print("Failed to check if post is favorited: optional self is nil")
                             }

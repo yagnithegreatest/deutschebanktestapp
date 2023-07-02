@@ -51,6 +51,9 @@
 		86A72FF02A5076F2005ED681 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FEF2A5076F2005ED681 /* CommentsView.swift */; };
 		86A72FF22A5077F9005ED681 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF12A5077F9005ED681 /* CommentsViewModel.swift */; };
 		86A72FF52A507A58005ED681 /* SingleCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF42A507A58005ED681 /* SingleCommentView.swift */; };
+		86A72FF72A518AD2005ED681 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF62A518AD2005ED681 /* ReachabilityManager.swift */; };
+		86A72FF92A518EAC005ED681 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FF82A518EAC005ED681 /* NetworkError.swift */; };
+		86A72FFB2A5194A5005ED681 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A72FFA2A5194A5005ED681 /* ViewModelState.swift */; };
 		86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */; };
 		86D391C02A4D7B6E00B09323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391BF2A4D7B6E00B09323 /* Assets.xcassets */; };
 		86D391C32A4D7B6E00B09323 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D391C22A4D7B6E00B09323 /* Preview Assets.xcassets */; };
@@ -117,6 +120,9 @@
 		86A72FEF2A5076F2005ED681 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		86A72FF12A5077F9005ED681 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		86A72FF42A507A58005ED681 /* SingleCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCommentView.swift; sourceTree = "<group>"; };
+		86A72FF62A518AD2005ED681 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		86A72FF82A518EAC005ED681 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		86A72FFA2A5194A5005ED681 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		86D391B82A4D7B6D00B09323 /* DeutscheBankTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeutscheBankTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D391BB2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutscheBankTestAppDelegate.swift; sourceTree = "<group>"; };
 		86D391BF2A4D7B6E00B09323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 				86A72F8A2A4D84C0005ED681 /* PostsView */,
 				86A72FC12A4DE7A6005ED681 /* EmptyStateView.swift */,
 				86A72FC32A4EDD47005ED681 /* EntryView.swift */,
+				86A72FFA2A5194A5005ED681 /* ViewModelState.swift */,
 			);
 			path = ViewLayer;
 			sourceTree = "<group>";
@@ -450,6 +457,8 @@
 				86A72F942A4D93A2005ED681 /* Requests */,
 				86A72F912A4D9170005ED681 /* Services */,
 				86A72F9F2A4D9A49005ED681 /* NetworkSession.swift */,
+				86A72FF62A518AD2005ED681 /* ReachabilityManager.swift */,
+				86A72FF82A518EAC005ED681 /* NetworkError.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -650,6 +659,7 @@
 				86A72FF52A507A58005ED681 /* SingleCommentView.swift in Sources */,
 				86A72F902A4D8685005ED681 /* ServiceLocator.swift in Sources */,
 				86A72FAA2A4DBF98005ED681 /* LoadingView.swift in Sources */,
+				86A72FFB2A5194A5005ED681 /* ViewModelState.swift in Sources */,
 				86A72F932A4D91FE005ED681 /* PostsNetworkService.swift in Sources */,
 				86A72FAC2A4DBFD6005ED681 /* ErrorView.swift in Sources */,
 				86A72FF02A5076F2005ED681 /* CommentsView.swift in Sources */,
@@ -660,6 +670,7 @@
 				86A72FB72A4DCF6A005ED681 /* SinglePostView.swift in Sources */,
 				86A72FBB2A4DD5F6005ED681 /* FavButton.swift in Sources */,
 				86A72F982A4D93D7005ED681 /* CommentsNetworkService+Requests.swift in Sources */,
+				86A72FF72A518AD2005ED681 /* ReachabilityManager.swift in Sources */,
 				86A72F8E2A4D84E5005ED681 /* PostsViewModel.swift in Sources */,
 				86A72F882A4D8419005ED681 /* CommentAPIModel.swift in Sources */,
 				86A72FD52A4F1121005ED681 /* Post.swift in Sources */,
@@ -670,6 +681,7 @@
 				86A72FA02A4D9A49005ED681 /* NetworkSession.swift in Sources */,
 				86A72F9A2A4D94FB005ED681 /* CommentsNetworkService.swift in Sources */,
 				86D391BC2A4D7B6D00B09323 /* DeutscheBankTestAppDelegate.swift in Sources */,
+				86A72FF92A518EAC005ED681 /* NetworkError.swift in Sources */,
 				86A72FD92A4F1C84005ED681 /* PostDataManager.swift in Sources */,
 				86A72FBD2A4DD6BB005ED681 /* ImageManager.swift in Sources */,
 				86A72FB02A4DC4E6005ED681 /* LoginView.swift in Sources */,

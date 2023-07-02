@@ -15,9 +15,15 @@ protocol NetworkServiceProtocol {
 class NetworkService: NetworkServiceProtocol {
     
     private let networkSession: NetworkSessionProtocol
+    private let reachabilityManager: ReachabilityManagerProtocol
     
-    init(networkSession: NetworkSessionProtocol = NetworkSession()) {
+    private var isReachable: Bool {
+        return self.reachabilityManager.isReachable
+    }
+    
+    init(networkSession: NetworkSessionProtocol = ServiceLocator.shared.getService(), reachabilityManager: ReachabilityManagerProtocol = ServiceLocator.shared.getService()) {
         self.networkSession = networkSession
+        self.reachabilityManager = reachabilityManager
     }
     
     func request<T: Codable>(
@@ -25,9 +31,14 @@ class NetworkService: NetworkServiceProtocol {
         completion: @escaping (Result<T, Error>) -> Void
     ) {
         
+        guard self.isReachable else {
+            completion(.failure(NetworkError.notReachable))
+            return
+        }
+        
         let url = "\(Constants.NetworkConstants.baseURL)/\(request.path)"
         
-        networkSession.request(
+        self.networkSession.request(
             url,
             method: request.method,
             parameters: request.parameters,
