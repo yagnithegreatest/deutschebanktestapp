@@ -2,6 +2,8 @@
 
 DeutscheBankTestApp is an iOS app that allows users to log in with their UserID and fetch their posts from [JSONPlaceholder API](https://jsonplaceholder.typicode.com). Users can mark any post as a favorite, and these favorites are stored locally for later viewing. Users can easily switch between viewing all posts or only their favorite ones.
 
+- **iOS version supported** 14 and above.
+
 ## Tech Stack
 The app is developed using Swift and utilizes the following technologies and libraries:
 
@@ -9,6 +11,7 @@ The app is developed using Swift and utilizes the following technologies and lib
 - **MVVM** as an architecture/
 - **Alamofire** for networking tasks, fetching posts from the JSONPlaceholder API.
 - **CoreData** for local persistence of favorite posts.
+- **CocoaPods** for package managment.
 - **XCTest** framework for unit tests.
 - **Git** for version control.
 
@@ -36,9 +39,9 @@ Even if it's just the foundation of the brand new app needed to be scalable and 
 ## Setup
 Follow these steps to get the app running on your local machine:
 
-1. Clone this repository: `git clone https://github.com/yourusername/DeutscheBankTestApp.git`
+1. Clone this repository: `git clone git@github.com:yagnithegreatest/deutschebanktestapp.git`
 2. Navigate to the project directory: `cd DeutscheBankTestApp`
-3. Open the project in Xcode: `open DeutscheBankTestApp.xcodeproj`
+3. Open the project in Xcode: `open DeutscheBankTestApp.xcworkspace`
 4. Build and run the project in the iOS Simulator or on a physical device.
 
 ## Testing
